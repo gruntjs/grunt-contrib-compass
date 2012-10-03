@@ -2,9 +2,8 @@
  * grunt-contrib-compass
  * http://gruntjs.com/
  *
- * Copyright (c) 2012 Tim Branyen, contributors
+ * Copyright (c) 2012 Sindre Sorhus, contributors
  * Licensed under the MIT license.
- * https://github.com/gruntjs/grunt-contrib-compass/blob/master/LICENSE-MIT
  */
 
 module.exports = function(grunt) {
