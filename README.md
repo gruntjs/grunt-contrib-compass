@@ -1,5 +1,6 @@
 # grunt-contrib-compass
-> Your description here (part of the [grunt-contrib](https://github.com/gruntjs/grunt-contrib) collection).  Submitted by [Sindre Sorhus](/sindresorhus).
+
+> Your description here.
 
 ## Getting Started
 Install this grunt plugin next to your project's [grunt.js gruntfile][getting_started] with: `npm install grunt-contrib-compass`
@@ -19,3 +20,7 @@ grunt.loadNpmTasks('grunt-contrib-compass');
 ## Release History
 
 * 2012/08/xx - v0.2.0 - notation
+
+--
+
+Task submitted by [Sindre Sorhus](/sindresorhus).

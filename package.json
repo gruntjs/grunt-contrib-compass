@@ -4,8 +4,8 @@
   "version": "0.2.0",
   "homepage": "https://github.com/gruntjs/grunt-contrib-compass",
   "author": {
-    "name": "Sindre Sorhus",
-    "url": "http://github.com/sindresorhus"
+    "name": "Grunt Team",
+    "url": "http://gruntjs.com/"
   },
   "repository": {
     "type": "git",
