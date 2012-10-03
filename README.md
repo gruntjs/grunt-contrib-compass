@@ -16,11 +16,6 @@ grunt.loadNpmTasks('grunt-contrib-compass');
 
 ### Overview
 
-
-## Release History
-
-* 2012/08/xx - v0.2.0 - notation
-
 --
 
-Task submitted by [Sindre Sorhus](/sindresorhus).
+*Task submitted by [Sindre Sorhus](/sindresorhus).*
