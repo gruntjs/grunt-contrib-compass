@@ -11,8 +11,8 @@ Then add this line to your project's `grunt.js` gruntfile:
 grunt.loadNpmTasks('grunt-contrib-compass');
 ```
 
-[grunt]: https://github.com/cowboy/grunt
-[getting_started]: https://github.com/cowboy/grunt/blob/master/docs/getting_started.md
+[grunt]: https://github.com/gruntjs/grunt
+[getting_started]: https://github.com/gruntjs/grunt/blob/master/docs/getting_started.md
 
 ### Overview
 
