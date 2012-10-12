@@ -13,11 +13,11 @@ module.exports = function(grunt) {
   grunt.util = grunt.util || grunt.utils;
 
   var _ = grunt.util._;
-  var helpers = require('grunt-contrib-lib').init(grunt);
+  var helpers = require('grunt-lib-contrib').init(grunt);
 
   grunt.registerMultiTask('compass', '', function() {
 
-    var helpers = require('grunt-contrib-lib').init(grunt);
+    var helpers = require('grunt-lib-contrib').init(grunt);
     var options = helpers.options(this, {namespace: 'JST'});
 
     grunt.verbose.writeflags(options, 'Options');
