@@ -49,6 +49,9 @@ module.exports = function(grunt) {
         options: {
           raw: 'sass_dir = "test/fixtures"\ncss_dir = "tmp3"'
         }
+      },
+      options: {
+          outputStyle: 'compressed'
       }
     },
 
