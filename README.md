@@ -123,27 +123,27 @@ Turn off colorized output.
 
 [config]: http://compass-style.org/help/tutorials/configuration-reference/
 
-### Examples
+### Usage Examples
 
 #### Example config
 
 ```javascript
 grunt.initConfig({
-	compass: {									// Task
-		dist: {									// Target
-			options: {							// Target options
-				sassDir: 'sass',
-				cssDir: 'css',
-				environment: 'production'
-			}
-		},
-		dev: {									// Another target
-			options: {
-				sassDir: 'sass',
-				cssDir: 'css'
-			}
-		}
-	}
+  compass: {                  // Task
+    dist: {                   // Target
+      options: {              // Target options
+        sassDir: 'sass',
+        cssDir: 'css',
+        environment: 'production'
+      }
+    },
+    dev: {                    // Another target
+      options: {
+        sassDir: 'sass',
+        cssDir: 'css'
+      }
+    }
+  }
 });
 
 grunt.loadNpmTasks('grunt-contrib-compass');
@@ -159,13 +159,13 @@ grunt.registerTask('default', ['jshint', 'compass']);
 
 ```javascript
 grunt.initConfig({
-	compass: {
-		dist: {
-			options: {
-				config: 'config/config.rb'
-			}
-		}
-	}
+  compass: {
+    dist: {
+      options: {
+        config: 'config/config.rb'
+      }
+    }
+  }
 });
 ```
 
@@ -173,14 +173,14 @@ grunt.initConfig({
 
 ```javascript
 grunt.initConfig({
-	compass: {
-		dist: {
-			options: {
-				config: 'config/config.rb',  // css_dir = 'dev/css'
-				cssDir: 'dist/css'
-			}
-		}
-	}
+  compass: {
+    dist: {
+      options: {
+        config: 'config/config.rb',  // css_dir = 'dev/css'
+        cssDir: 'dist/css'
+      }
+    }
+  }
 });
 ```
 
@@ -188,15 +188,15 @@ grunt.initConfig({
 
 ```javascript
 grunt.initConfig({
-	compass: {
-		dist: {
-			options: {
-				sassDir: 'sass',
-				cssDir: 'css',
-				raw: 'preferred_syntax = :sass\n' // Use `raw` since it's not directly available
-			}
-		}
-	}
+  compass: {
+    dist: {
+      options: {
+        sassDir: 'sass',
+        cssDir: 'css',
+        raw: 'preferred_syntax = :sass\n' // Use `raw` since it's not directly available
+      }
+    }
+  }
 });
 ```
 
@@ -209,4 +209,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*Generated on Mon Oct 22 2012 20:00:43*
+*Generated on Mon Oct 22 2012 20:23:57*
