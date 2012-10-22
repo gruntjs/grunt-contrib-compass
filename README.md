@@ -26,7 +26,7 @@ If the plugin has been installed correctly, running `grunt --help` at the comman
 [package.json]: https://npmjs.org/doc/json.html
 
 
-## The compass task
+## Compass task
 
 This task requires you to have [Ruby](http://www.ruby-lang.org/en/downloads/) and [Compass](http://compass-style.org/install/). If you're on OS X or Linux you probably already have Ruby installed, try `ruby -v` in your terminal. When you've confirmed you have Ruby installed, run `gem update --system && gem install compass` to install Compass.
 
@@ -203,10 +203,10 @@ grunt.initConfig({
 
 ## Release History
 
- * 2012-10-22 - v0.1.0 - Initial release
+ * 2012-10-22   v0.1.0   Initial release
 
 ---
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*Generated on Mon Oct 22 2012 18:43:47*
+*Generated on Mon Oct 22 2012 20:00:43*
