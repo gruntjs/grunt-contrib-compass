@@ -2,113 +2,35 @@
 
 > Compile Compass to CSS
 
+_Note that this plugin has not yet been released, and only works with the latest bleeding-edge, in-development version of grunt. See the [When will I be able to use in-development feature 'X'?](https://github.com/gruntjs/grunt/blob/devel/docs/faq.md#when-will-i-be-able-to-use-in-development-feature-x) FAQ entry for more information._
 
-### Overview
+## Getting Started
+_If you haven't used [grunt][] before, be sure to check out the [Getting Started][] guide._
+
+From the same directory as your project's [Gruntfile][Getting Started] and [package.json][], install this plugin with the following command:
+
+```shell
+npm install grunt-contrib-compass --save-dev
+```
+
+Once that's done, add this line to your project's Gruntfile:
+
+```js
+grunt.loadNpmTasks('grunt-contrib-compass');
+```
+
+If the plugin has been installed correctly, running `grunt --help` at the command line should list the newly-installed plugin's task or tasks. In addition, the plugin should be listed in package.json as a `devDependency`, which ensures that it will be installed whenever the `npm install` command is run.
+
+[grunt]: http://gruntjs.com/
+[Getting Started]: https://github.com/gruntjs/grunt/blob/devel/docs/getting_started.md
+[package.json]: https://npmjs.org/doc/json.html
+
+
+## The compass task
 
 This task requires you to have [Ruby](http://www.ruby-lang.org/en/downloads/) and [Compass](http://compass-style.org/install/). If you're on OS X or Linux you probably already have Ruby installed, try `ruby -v` in your terminal. When you've confirmed you have Ruby installed, run `gem update --system && gem install compass` to install Compass.
 
-
-## Getting Started
-
-Install this grunt plugin next to your project's [grunt.js gruntfile][getting_started] with: `npm install grunt-contrib-compass`
-
-Then add this line to your project's `grunt.js` gruntfile:
-
-```javascript
-grunt.loadNpmTasks('grunt-contrib-compass');
-```
-
-[grunt]: https://github.com/gruntjs/grunt
-[getting_started]: https://github.com/gruntjs/grunt/blob/master/docs/getting_started.md
-
-
-## Documentation
-
 Compass operates on a folder level, because of this you don't specify any src/dest, but instead define the `sassDir` and `cssDir` options.
-
-
-### Example config
-
-```javascript
-grunt.initConfig({
-	compass: {									// Task
-		dist: {									// Target
-			options: {							// Target options
-				sassDir: 'sass',
-				cssDir: 'css',
-				environment: 'production'
-			}
-		},
-		dev: {									// Another target
-			options: {
-				sassDir: 'sass',
-				cssDir: 'css'
-			}
-		}
-	}
-});
-
-grunt.loadNpmTasks('grunt-contrib-compass');
-
-grunt.registerTask('default', 'lint compass');
-```
-
-
-### Example usage
-
-
-#### Use external config file
-
-```javascript
-grunt.initConfig({
-	compass: {
-		dist: {
-			options: {
-				config: 'config/config.rb'
-			}
-		}
-	}
-});
-```
-
-#### Override setting in external config file
-
-```javascript
-grunt.initConfig({
-	compass: {
-		dist: {
-			options: {
-				config: 'config/config.rb',  // css_dir = 'dev/css'
-				cssDir: 'dist/css'
-			}
-		}
-	}
-});
-```
-
-#### Use `raw` option
-
-```javascript
-grunt.initConfig({
-	compass: {
-		dist: {
-			options: {
-				sassDir: 'sass',
-				cssDir: 'css',
-				raw: 'preferred_syntax = :sass\n' // Use `raw` since it's not directly available
-			}
-		}
-	}
-});
-```
-
-
-### Parameters
-
-#### options ```object```
-
-This controls how this task (and its helpers) operate and should contain key:value pairs, see options below.
-
 
 ### Options
 
@@ -198,9 +120,93 @@ Dry Run. Tells you what it plans to do.
 
 Turn off colorized output.
 
---
-
-*Task submitted by [Sindre Sorhus](/sindresorhus).*
-
 
 [config]: http://compass-style.org/help/tutorials/configuration-reference/
+
+### Examples
+
+#### Example config
+
+```javascript
+grunt.initConfig({
+	compass: {									// Task
+		dist: {									// Target
+			options: {							// Target options
+				sassDir: 'sass',
+				cssDir: 'css',
+				environment: 'production'
+			}
+		},
+		dev: {									// Another target
+			options: {
+				sassDir: 'sass',
+				cssDir: 'css'
+			}
+		}
+	}
+});
+
+grunt.loadNpmTasks('grunt-contrib-compass');
+
+grunt.registerTask('default', ['jshint', 'compass']);
+```
+
+
+#### Example usage
+
+
+##### Use external config file
+
+```javascript
+grunt.initConfig({
+	compass: {
+		dist: {
+			options: {
+				config: 'config/config.rb'
+			}
+		}
+	}
+});
+```
+
+##### Override setting in external config file
+
+```javascript
+grunt.initConfig({
+	compass: {
+		dist: {
+			options: {
+				config: 'config/config.rb',  // css_dir = 'dev/css'
+				cssDir: 'dist/css'
+			}
+		}
+	}
+});
+```
+
+##### Use `raw` option
+
+```javascript
+grunt.initConfig({
+	compass: {
+		dist: {
+			options: {
+				sassDir: 'sass',
+				cssDir: 'css',
+				raw: 'preferred_syntax = :sass\n' // Use `raw` since it's not directly available
+			}
+		}
+	}
+});
+```
+
+
+## Release History
+
+ * 2012-10-22 - v0.1.0 - Initial release
+
+---
+
+Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
+
+*Generated on Mon Oct 22 2012 18:43:47*

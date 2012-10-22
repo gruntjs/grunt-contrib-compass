@@ -6,10 +6,9 @@
  * Licensed under the MIT license.
  */
 
-module.exports = function(grunt) {
-  'use strict';
+'use strict';
 
-  var helpers = require('grunt-lib-contrib').init(grunt);
+module.exports = function(grunt) {
   var fs = require('fs');
   var tmp = require('tmp');
 
@@ -18,17 +17,16 @@ module.exports = function(grunt) {
       cmd: process.platform === 'win32' ? 'compass.bat' : 'compass',
       args: args
     }, function(err, result, code) {
-      // `compass compile` exits with 1 when it has nothing to compile
-      // https://github.com/chriseppstein/compass/issues/993
-      cb((code === 0 || !/Nothing to compile/g.test(result.stdout)) || result.stderr);
-    }).on('exit', function(code) {
       if (code === 127) {
-        grunt.warn(
+        return grunt.warn(
           'You need to have Ruby and Compass installed ' +
           'and in your system PATH for this task to work. ' +
           'More info: https://github.com/gruntjs/grunt-contrib-compass'
         );
       }
+      // `compass compile` exits with 1 when it has nothing to compile
+      // https://github.com/chriseppstein/compass/issues/993
+      cb((code === 0 || !/Nothing to compile/g.test(result.stdout)) || result.stderr);
     });
     child.stdout.pipe(process.stdout);
     child.stderr.pipe(process.stderr);
@@ -36,7 +34,8 @@ module.exports = function(grunt) {
 
   grunt.registerMultiTask('compass', 'Compile Compass to CSS', function() {
     var args;
-    var options = helpers.options(this);
+    var helpers = require('grunt-lib-contrib').init(grunt);
+    var options = this.options();
     var cb = this.async();
     var raw = options.raw;
 

@@ -1,7 +1,7 @@
 {
   "name": "grunt-contrib-compass",
-  "description": "Your description here.",
-  "version": "0.2.0",
+  "description": "Compile Compass to CSS",
+  "version": "0.1.0",
   "homepage": "https://github.com/gruntjs/grunt-contrib-compass",
   "author": {
     "name": "Grunt Team",
@@ -22,19 +22,30 @@
   ],
   "main": "grunt.js",
   "engines": {
-    "node": ">= 0.8.0"
+    "node": ">=0.8.0"
   },
   "scripts": {
     "test": "grunt test"
   },
   "dependencies": {
-    "grunt-lib-contrib": "~0.2.0"
+    "grunt-lib-contrib": "~0.3.0",
+    "tmp": "0.0.15"
   },
   "devDependencies": {
-    "grunt": "~0.3.15",
-    "grunt-contrib-clean": "~0.2.0"
+    "grunt": "~0.4.0a",
+    "grunt-contrib-internal": "~0.1.0",
+    "grunt-contrib-clean": "~0.4.0a",
+    "grunt-contrib-jshint": "~0.1.0",
+    "grunt-contrib-nodeunit": "~0.1.0"
   },
   "keywords": [
-    "gruntplugin"
+    "gruntplugin",
+    "compass",
+    "scss",
+    "sass",
+    "css",
+    "compile",
+    "preprocessor",
+    "style"
   ]
 }
