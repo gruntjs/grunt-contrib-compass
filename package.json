@@ -39,7 +39,6 @@
     "grunt-contrib-nodeunit": "~0.1.0"
   },
   "keywords": [
-    "gruntplugin",
     "compass",
     "scss",
     "sass",

@@ -9,7 +9,7 @@ _If you haven't used [grunt][] before, be sure to check out the [Getting Started
 
 From the same directory as your project's [Gruntfile][Getting Started] and [package.json][], install this plugin with the following command:
 
-```shell
+```bash
 npm install grunt-contrib-compass --save-dev
 ```
 
@@ -26,7 +26,7 @@ If the plugin has been installed correctly, running `grunt --help` at the comman
 [package.json]: https://npmjs.org/doc/json.html
 
 
-## Compass task
+## The compass task
 
 This task requires you to have [Ruby](http://www.ruby-lang.org/en/downloads/) and [Compass](http://compass-style.org/install/). If you're on OS X or Linux you probably already have Ruby installed, try `ruby -v` in your terminal. When you've confirmed you have Ruby installed, run `gem update --system && gem install compass` to install Compass.
 
@@ -203,10 +203,9 @@ grunt.initConfig({
 
 ## Release History
 
- * 2012-10-22   v0.1.0   Initial release
+ * 2012-10-21 - v0.1.0 - Initial release
 
----
+--
+Task submitted by <a href="http://github.com/sindresorhus">Sindre Sorhus</a>.
 
-Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
-
-*Generated on Mon Oct 22 2012 20:23:57*
+*Generated on Wed Oct 24 2012 09:42:36.*
