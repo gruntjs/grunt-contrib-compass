@@ -3,4 +3,5 @@
 .gitattributes
 .travis.yml
 test
-grunt.js
+docs
+Gruntfile.js

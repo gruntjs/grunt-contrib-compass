@@ -203,9 +203,9 @@ grunt.initConfig({
 
 ## Release History
 
- * 2012-10-21 - v0.1.0 - Initial release
+ * 2012-10-22 - v0.1.0 - Initial release
 
 --
 Task submitted by <a href="http://github.com/sindresorhus">Sindre Sorhus</a>.
 
-*Generated on Wed Oct 24 2012 09:42:36.*
+*Generated on Fri Nov 09 2012 09:54:05.*
