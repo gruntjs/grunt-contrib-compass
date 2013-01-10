@@ -5,32 +5,24 @@
 _Note that this plugin has not yet been released, and only works with the latest bleeding-edge, in-development version of grunt. See the [When will I be able to use in-development feature 'X'?](https://github.com/gruntjs/grunt/blob/devel/docs/faq.md#when-will-i-be-able-to-use-in-development-feature-x) FAQ entry for more information._
 
 ## Getting Started
-_If you haven't used [grunt][] before, be sure to check out the [Getting Started][] guide._
+If you haven't used [grunt][] before, be sure to check out the [Getting Started][] guide, as it explains how to create a [gruntfile][Getting Started] as well as install and use grunt plugins. Once you're familiar with that process, install this plugin with this command:
 
-From the same directory as your project's [Gruntfile][Getting Started] and [package.json][], install this plugin with the following command:
-
-```bash
+```shell
 npm install grunt-contrib-compass --save-dev
 ```
 
-Once that's done, add this line to your project's Gruntfile:
-
-```js
-grunt.loadNpmTasks('grunt-contrib-compass');
-```
-
-If the plugin has been installed correctly, running `grunt --help` at the command line should list the newly-installed plugin's task or tasks. In addition, the plugin should be listed in package.json as a `devDependency`, which ensures that it will be installed whenever the `npm install` command is run.
-
 [grunt]: http://gruntjs.com/
 [Getting Started]: https://github.com/gruntjs/grunt/blob/devel/docs/getting_started.md
-[package.json]: https://npmjs.org/doc/json.html
 
 
-## The compass task
+## Compass task
+_Run this task with the `grunt compass` command._
 
 This task requires you to have [Ruby](http://www.ruby-lang.org/en/downloads/) and [Compass](http://compass-style.org/install/). If you're on OS X or Linux you probably already have Ruby installed, try `ruby -v` in your terminal. When you've confirmed you have Ruby installed, run `gem update --system && gem install compass` to install Compass.
 
 Compass operates on a folder level, because of this you don't specify any src/dest, but instead define the `sassDir` and `cssDir` options.
+
+_This plugin is only compatible with Grunt `>= 0.4.x`._
 
 ### Options
 
@@ -203,9 +195,11 @@ grunt.initConfig({
 
 ## Release History
 
- * 2012-10-22 - v0.1.0 - Initial release
+ * 2013-01-09   v0.1.1rc5   Updating to work with grunt v0.4.0rc5.
+ * 2012-10-21   v0.1.0   Initial release
 
---
-Task submitted by <a href="http://github.com/sindresorhus">Sindre Sorhus</a>.
+---
 
-*Generated on Fri Nov 09 2012 09:54:05.*
+Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
+
+*This file was generated on Thu Jan 10 2013 14:12:22.*
