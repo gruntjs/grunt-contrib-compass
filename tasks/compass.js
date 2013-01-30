@@ -8,7 +8,7 @@
 
 'use strict';
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   var fs = require('fs');
   var tmp = require('tmp');
 
@@ -16,7 +16,7 @@ module.exports = function(grunt) {
     var child = grunt.util.spawn({
       cmd: process.platform === 'win32' ? 'compass.bat' : 'compass',
       args: args
-    }, function(err, result, code) {
+    }, function (err, result, code) {
       if (code === 127) {
         return grunt.warn(
           'You need to have Ruby and Compass installed ' +
@@ -32,7 +32,7 @@ module.exports = function(grunt) {
     child.stderr.pipe(process.stderr);
   }
 
-  grunt.registerMultiTask('compass', 'Compile Compass to CSS', function() {
+  grunt.registerMultiTask('compass', 'Compile Compass to CSS', function () {
     var args;
     var helpers = require('grunt-lib-contrib').init(grunt);
     var options = this.options();
@@ -53,13 +53,13 @@ module.exports = function(grunt) {
     // Compass doesn't have a long flag for this option:
     // https://github.com/chriseppstein/compass/issues/1055
     if (options.importPath) {
-      args = args.map(function(el) {
+      args = args.map(function (el) {
         return el.replace('--import-path', '-I');
       });
     }
 
     if (raw) {
-      tmp.file(function(err, path, fd) {
+      tmp.file(function (err, path, fd) {
         if (err) {
           grunt.fail.fatal(err);
         }
