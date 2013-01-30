@@ -92,6 +92,10 @@ Load all the frameworks or extensions found in the specified directory.
 
 Makes files under the specified folder findable by Sass's @import directive.
 
+#### debugInfo ```boolean```
+
+Causes the line number and file where a selector is defined to be emitted into the compiled CSS in a format that can be understood by the browser. Automatically disabled when using `outputStyle: 'compressed'`.
+
 #### quiet ```boolean```
 
 Quiet mode.
@@ -195,12 +199,12 @@ grunt.initConfig({
 
 ## Release History
 
- * 2013-01-24   v0.1.1rc7   Updating grunt/gruntplugin dependencies to rc7. Changing in-development grunt/gruntplugin dependency versions from tilde version ranges to specific versions.
- * 2013-01-09   v0.1.1rc5   Updating to work with grunt v0.4.0rc5.
- * 2012-10-21   v0.1.0   Initial release
+ * 2013-01-25   v0.1.1rc7   Updating grunt/gruntplugin dependencies to rc7. Changing in-development grunt/gruntplugin dependency versions from tilde version ranges to specific versions.
+ * 2013-01-10   v0.1.1rc5   Updating to work with grunt v0.4.0rc5.
+ * 2012-10-22   v0.1.0   Initial release
 
 ---
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Fri Jan 25 2013 17:26:40.*
+*This file was generated on Wed Jan 30 2013 02:00:41.*

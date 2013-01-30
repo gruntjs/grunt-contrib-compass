@@ -66,6 +66,10 @@ Load all the frameworks or extensions found in the specified directory.
 
 Makes files under the specified folder findable by Sass's @import directive.
 
+## debugInfo ```boolean```
+
+Causes the line number and file where a selector is defined to be emitted into the compiled CSS in a format that can be understood by the browser. Automatically disabled when using `outputStyle: 'compressed'`.
+
 ## quiet ```boolean```
 
 Quiet mode.
