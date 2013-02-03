@@ -36,6 +36,10 @@ Specify the location of the Compass [configuration file][config] explicitly. Def
 
 String form of the Compass [configuration file][config].
 
+#### basePath ```string```
+
+The the path Compass will run from. Defaults to the same path as your Gruntfile.
+
 #### app ```string```
 
 Tell compass what kind of application it is integrating with. Can be `stand_alone` (default) or `rails`.
@@ -207,4 +211,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Wed Jan 30 2013 02:00:41.*
+*This file was generated on Sun Feb 03 2013 19:51:54.*

@@ -33,22 +33,29 @@ module.exports = function (grunt) {
   }
 
   grunt.registerMultiTask('compass', 'Compile Compass to CSS', function () {
-    var args;
+    var args = ['compile'];
     var helpers = require('grunt-lib-contrib').init(grunt);
     var options = this.options();
     var cb = this.async();
     var raw = options.raw;
-
-    // Don't want this as CLI flag
-    delete options.raw;
-
-    args = ['compile'].concat(helpers.optsToArgs(options));
+    var basePath = options.basePath;
 
     grunt.verbose.writeflags(options, 'Options');
 
     if (raw && options.config) {
       grunt.fail.fatal('The options `raw` and `config` are mutually exclusive');
     }
+
+    if (options.basePath) {
+      args.push(options.basePath);
+    }
+
+    // don't want these as CLI flags
+    delete options.raw;
+    delete options.basePath;
+
+    // add converted options
+    [].push.apply(args, helpers.optsToArgs(options));
 
     // Compass doesn't have a long flag for this option:
     // https://github.com/chriseppstein/compass/issues/1055
