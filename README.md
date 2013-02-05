@@ -12,7 +12,7 @@ npm install grunt-contrib-compass --save-dev
 ```
 
 [grunt]: http://gruntjs.com/
-[Getting Started]: https://github.com/gruntjs/grunt/blob/devel/docs/getting_started.md
+[Getting Started]: http://gruntjs.com/getting-started
 
 
 ## Compass task
@@ -203,12 +203,12 @@ grunt.initConfig({
 
 ## Release History
 
- * 2013-01-25   v0.1.1rc7   Updating grunt/gruntplugin dependencies to rc7. Changing in-development grunt/gruntplugin dependency versions from tilde version ranges to specific versions.
- * 2013-01-10   v0.1.1rc5   Updating to work with grunt v0.4.0rc5.
- * 2012-10-22   v0.1.0   Initial release
+ * 2013-01-24   v0.1.1rc7   Updating grunt/gruntplugin dependencies to rc7. Changing in-development grunt/gruntplugin dependency versions from tilde version ranges to specific versions.
+ * 2013-01-09   v0.1.1rc5   Updating to work with grunt v0.4.0rc5.
+ * 2012-10-21   v0.1.0   Initial release
 
 ---
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Sun Feb 03 2013 19:51:54.*
+*This file was generated on Tue Feb 05 2013 11:49:41.*
