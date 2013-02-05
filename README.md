@@ -120,6 +120,10 @@ Dry Run. Tells you what it plans to do.
 
 Turn off colorized output.
 
+#### bundleExec ```boolean```
+
+Run `compass compile` with [bundle exec](http://gembundler.com/man/bundle-exec.1.html): `bundle exec compass compile`.
+
 
 [config]: http://compass-style.org/help/tutorials/configuration-reference/
 
@@ -203,12 +207,12 @@ grunt.initConfig({
 
 ## Release History
 
- * 2013-01-24   v0.1.1rc7   Updating grunt/gruntplugin dependencies to rc7. Changing in-development grunt/gruntplugin dependency versions from tilde version ranges to specific versions.
- * 2013-01-09   v0.1.1rc5   Updating to work with grunt v0.4.0rc5.
- * 2012-10-21   v0.1.0   Initial release
+ * 2013-01-25   v0.1.1rc7   Updating grunt/gruntplugin dependencies to rc7. Changing in-development grunt/gruntplugin dependency versions from tilde version ranges to specific versions.
+ * 2013-01-10   v0.1.1rc5   Updating to work with grunt v0.4.0rc5.
+ * 2012-10-22   v0.1.0   Initial release
 
 ---
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Tue Feb 05 2013 11:49:41.*
+*This file was generated on Tue Feb 05 2013 18:51:46.*

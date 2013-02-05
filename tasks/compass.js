@@ -46,12 +46,17 @@ module.exports = function (grunt) {
       grunt.fail.fatal('The options `raw` and `config` are mutually exclusive');
     }
 
+    if (options.bundleExec) {
+      args.unshift('bundle', 'exec');
+    }
+
     if (options.basePath) {
       args.push(options.basePath);
     }
 
     // don't want these as CLI flags
     delete options.raw;
+    delete options.bundleExec;
     delete options.basePath;
 
     // add converted options

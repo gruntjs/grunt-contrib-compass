@@ -94,5 +94,9 @@ Dry Run. Tells you what it plans to do.
 
 Turn off colorized output.
 
+## bundleExec ```boolean```
+
+Run `compass compile` with [bundle exec](http://gembundler.com/man/bundle-exec.1.html): `bundle exec compass compile`.
+
 
 [config]: http://compass-style.org/help/tutorials/configuration-reference/
