@@ -1,3 +1,7 @@
+v0.1.1rc8:
+  date: 2013-02-05
+  changes:
+    - 'Added new options: basePath specify, debugInfo.'
 v0.1.1rc7:
   date: 2013-01-25
   changes:
