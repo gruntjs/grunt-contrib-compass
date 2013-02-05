@@ -10,6 +10,7 @@
 
 module.exports = function (grunt) {
   var fs = require('fs');
+  var path = require('path');
   var tmp = require('tmp');
 
   function compile(args, cb) {
@@ -54,10 +55,25 @@ module.exports = function (grunt) {
       args.push(options.basePath);
     }
 
+    if (options.specify) {
+      var files = grunt.file.expand({
+        filter: function (filePath) {
+          return path.basename(filePath)[0] !== '_';
+        }
+      }, options.specify);
+
+      if (files.length > 0) {
+        [].push.apply(args, files);
+      } else {
+        return grunt.log.writeln('`specify` option used, but no files were found.');
+      }
+    }
+
     // don't want these as CLI flags
     delete options.raw;
     delete options.bundleExec;
     delete options.basePath;
+    delete options.specify;
 
     // add converted options
     [].push.apply(args, helpers.optsToArgs(options));

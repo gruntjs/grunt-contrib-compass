@@ -52,6 +52,10 @@ The source directory where you keep your Sass stylesheets.
 
 The target directory where you keep your CSS stylesheets.
 
+#### specify ```string|array```
+
+Lets you specify which files you want to compile. Useful if you don't want to compile the whole folder. Globbing supported. Ignores filenames starting with underscore. Files must be in the directory you specified in `sassDir`.
+
 #### imagesDir ```string```
 
 The directory where you keep your images.
@@ -215,4 +219,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Tue Feb 05 2013 18:51:46.*
+*This file was generated on Tue Feb 05 2013 19:28:18.*

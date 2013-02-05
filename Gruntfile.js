@@ -37,7 +37,8 @@ module.exports = function (grunt) {
       compile: {
         options: {
           sassDir: 'test/fixtures',
-          cssDir: 'tmp'
+          cssDir: 'tmp',
+          specify: 'test/fixtures/*.scss'
         }
       },
       compileWithConfigFile: {
