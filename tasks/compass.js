@@ -33,11 +33,9 @@ module.exports = function (grunt) {
     child.stderr.pipe(process.stderr);
   }
 
-  grunt.registerMultiTask('compass', 'Compile Compass to CSS', function () {
+  // build the array of arguments to build the compass command
+  function buildArgsArray(options) {
     var args = ['compile'];
-    var helpers = require('grunt-lib-contrib').init(grunt);
-    var options = this.options();
-    var cb = this.async();
     var raw = options.raw;
     var basePath = options.basePath;
 
@@ -74,6 +72,17 @@ module.exports = function (grunt) {
     delete options.bundleExec;
     delete options.basePath;
     delete options.specify;
+
+    return args;
+  }
+
+  grunt.registerMultiTask('compass', 'Compile Compass to CSS', function () {
+    var helpers = require('grunt-lib-contrib').init(grunt);
+    var options = this.options();
+    var cb = this.async();
+    var raw = options.raw;
+    // get the array of arguments for the compass command
+    var args = buildArgsArray(options);
 
     // add converted options
     [].push.apply(args, helpers.optsToArgs(options));
