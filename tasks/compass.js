@@ -9,7 +9,7 @@
 'use strict';
 
 module.exports = function (grunt) {
-  var compass = require( './lib/compass' ).init( grunt );
+  var compass = require('./lib/compass').init(grunt);
   var fs = require('fs');
   var tmp = require('tmp');
 
