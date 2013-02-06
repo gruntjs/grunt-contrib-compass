@@ -9,8 +9,8 @@
 'use strict';
 
 module.exports = function (grunt) {
+  var compass = require('./lib/compass').init(grunt);
   var fs = require('fs');
-  var path = require('path');
   var tmp = require('tmp');
 
   function compile(args, cb) {
@@ -34,57 +34,11 @@ module.exports = function (grunt) {
   }
 
   grunt.registerMultiTask('compass', 'Compile Compass to CSS', function () {
-    var args = ['compile'];
-    var helpers = require('grunt-lib-contrib').init(grunt);
     var options = this.options();
     var cb = this.async();
     var raw = options.raw;
-    var basePath = options.basePath;
-
-    grunt.verbose.writeflags(options, 'Options');
-
-    if (raw && options.config) {
-      grunt.fail.fatal('The options `raw` and `config` are mutually exclusive');
-    }
-
-    if (options.bundleExec) {
-      args.unshift('bundle', 'exec');
-    }
-
-    if (options.basePath) {
-      args.push(options.basePath);
-    }
-
-    if (options.specify) {
-      var files = grunt.file.expand({
-        filter: function (filePath) {
-          return path.basename(filePath)[0] !== '_';
-        }
-      }, options.specify);
-
-      if (files.length > 0) {
-        [].push.apply(args, files);
-      } else {
-        return grunt.log.writeln('`specify` option used, but no files were found.');
-      }
-    }
-
-    // don't want these as CLI flags
-    delete options.raw;
-    delete options.bundleExec;
-    delete options.basePath;
-    delete options.specify;
-
-    // add converted options
-    [].push.apply(args, helpers.optsToArgs(options));
-
-    // Compass doesn't have a long flag for this option:
-    // https://github.com/chriseppstein/compass/issues/1055
-    if (options.importPath) {
-      args = args.map(function (el) {
-        return el.replace('--import-path', '-I');
-      });
-    }
+    // get the array of arguments for the compass command
+    var args = compass.buildArgsArray(options);
 
     if (raw) {
       tmp.file(function (err, path, fd) {
