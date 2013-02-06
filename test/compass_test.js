@@ -1,9 +1,10 @@
+'use strict';
+
 var grunt = require('grunt');
 var compass = require('../tasks/lib/compass').init(grunt);
 
 exports.compass = {
   compile: function(test) {
-    'use strict';
     test.expect(1);
 
     var actual = grunt.file.read('tmp/compile.css');
@@ -13,7 +14,6 @@ exports.compass = {
     test.done();
   },
   compileWithConfigFile: function(test) {
-    'use strict';
     test.expect(1);
 
     var actual = grunt.file.read('tmp2/compile.css');
@@ -23,7 +23,6 @@ exports.compass = {
     test.done();
   },
   compileWithRaw: function(test) {
-    'use strict';
     test.expect(1);
 
     var actual = grunt.file.read('tmp3/compile.css');
@@ -33,8 +32,6 @@ exports.compass = {
     test.done();
   },
   bundleExec: function(test) {
-    'use strict';
-
     var dataSet;
 
     test.expect(1);
@@ -51,8 +48,6 @@ exports.compass = {
     test.done();
   },
   basePath: function(test) {
-    'use strict';
-
     var dataSet;
 
     test.expect(1);
@@ -69,7 +64,6 @@ exports.compass = {
     test.done();
   },
   specify: function(test) {
-    'use strict';
 
     var dataSet;
 
