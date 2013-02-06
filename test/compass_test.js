@@ -32,40 +32,58 @@ exports.compass = {
 
     test.done();
   },
-  bundleExec: function( test ) {
+  bundleExec: function(test) {
     'use strict';
 
     var dataSet;
 
-    test.expect( 1 );
+    test.expect(1);
 
     // Options object
     dataSet = {
       bundleExec: true
     };
 
-    test.deepEqual( compass.buildArgsArray( dataSet ),
+    test.deepEqual(compass.buildArgsArray(dataSet),
       ['bundle', 'exec', 'compile'],
-      'should return the correct command.' );
+      'should return the correct command.');
 
     test.done();
   },
-  basePath: function( test ) {
+  basePath: function(test) {
     'use strict';
 
     var dataSet;
 
-    test.expect( 1 );
+    test.expect(1);
 
     // Options object
     dataSet = {
       basePath: 'myproject'
     };
 
-    test.deepEqual( compass.buildArgsArray( dataSet ),
+    test.deepEqual(compass.buildArgsArray(dataSet),
       ['compile', 'myproject'],
-      'should return the correct command.' );
+      'should return the correct command.');
 
     test.done();
   },
+  specify: function(test) {
+    'use strict';
+
+    var dataSet;
+
+    test.expect(1);
+
+    // Options object
+    dataSet = {
+      specify: 'test/**/*.scss'
+    };
+
+    test.deepEqual(compass.buildArgsArray(dataSet),
+      ['compile', 'test/fixtures/compile.scss'],
+      'should return the correct command.');
+
+    test.done();
+  }
 };
