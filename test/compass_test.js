@@ -1,5 +1,5 @@
 var grunt = require('grunt');
-var compass = require( '../tasks/lib/compass' ).init(grunt);
+var compass = require('../tasks/lib/compass').init(grunt);
 
 exports.compass = {
   compile: function(test) {
