@@ -1,4 +1,5 @@
 var grunt = require('grunt');
+var compass = require( '../tasks/lib/compass' ).init(grunt);
 
 exports.compass = {
   compile: function(test) {
@@ -30,5 +31,41 @@ exports.compass = {
     test.equal(actual, expected, 'should compile with raw content specified');
 
     test.done();
-  }
+  },
+  bundleExec: function( test ) {
+    'use strict';
+
+    var dataSet;
+
+    test.expect( 1 );
+
+    // Options object
+    dataSet = {
+      bundleExec: true
+    };
+
+    test.deepEqual( compass.buildArgsArray( dataSet ),
+      ['bundle', 'exec', 'compile'],
+      'should return the correct command.' );
+
+    test.done();
+  },
+  basePath: function( test ) {
+    'use strict';
+
+    var dataSet;
+
+    test.expect( 1 );
+
+    // Options object
+    dataSet = {
+      basePath: 'myproject'
+    };
+
+    test.deepEqual( compass.buildArgsArray( dataSet ),
+      ['compile', 'myproject'],
+      'should return the correct command.' );
+
+    test.done();
+  },
 };
