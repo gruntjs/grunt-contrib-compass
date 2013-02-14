@@ -114,7 +114,7 @@ Show a full stacktrace on error.
 
 #### force ```boolean```
 
-Allows Compass to overwrite existing files.
+Forces Compass to compile, regardless of its cache state.
 
 #### dryRun ```boolean```
 
