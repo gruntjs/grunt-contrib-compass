@@ -2,17 +2,16 @@
 
 > Compile Compass to CSS
 
-_Note that this plugin has not yet been released, and only works with the latest bleeding-edge, in-development version of grunt. See the [When will I be able to use in-development feature 'X'?](https://github.com/gruntjs/grunt/blob/devel/docs/faq.md#when-will-i-be-able-to-use-in-development-feature-x) FAQ entry for more information._
+
 
 ## Getting Started
-If you haven't used [grunt][] before, be sure to check out the [Getting Started][] guide, as it explains how to create a [gruntfile][Getting Started] as well as install and use grunt plugins. Once you're familiar with that process, install this plugin with this command:
+If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
 npm install grunt-contrib-compass --save-dev
 ```
 
-[grunt]: http://gruntjs.com/
-[Getting Started]: http://gruntjs.com/getting-started
+
 
 
 ## Compass task
@@ -114,7 +113,7 @@ Show a full stacktrace on error.
 
 #### force ```boolean```
 
-Forces Compass to compile, regardless of its cache state.
+Allows Compass to overwrite existing files.
 
 #### dryRun ```boolean```
 
@@ -211,13 +210,14 @@ grunt.initConfig({
 
 ## Release History
 
- * 2013-02-05   v0.1.1rc8   Added new options: basePath specify, debugInfo.
- * 2013-01-25   v0.1.1rc7   Updating grunt/gruntplugin dependencies to rc7. Changing in-development grunt/gruntplugin dependency versions from tilde version ranges to specific versions.
- * 2013-01-10   v0.1.1rc5   Updating to work with grunt v0.4.0rc5.
- * 2012-10-22   v0.1.0   Initial release
+ * 2013-02-14   v0.1.1   First official release for Grunt 0.4.0.
+ * 2013-02-04   v0.1.1rc8   Added new options: basePath specify, debugInfo.
+ * 2013-01-24   v0.1.1rc7   Updating grunt/gruntplugin dependencies to rc7. Changing in-development grunt/gruntplugin dependency versions from tilde version ranges to specific versions.
+ * 2013-01-09   v0.1.1rc5   Updating to work with grunt v0.4.0rc5.
+ * 2012-10-21   v0.1.0   Initial release
 
 ---
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Tue Feb 05 2013 19:41:29.*
+*This file was generated on Fri Feb 15 2013 17:35:07.*
