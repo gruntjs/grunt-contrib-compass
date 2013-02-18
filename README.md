@@ -210,6 +210,7 @@ grunt.initConfig({
 
 ## Release History
 
+ * 2013-02-16   v0.1.2   Ensure Gruntfile.js is included.
  * 2013-02-14   v0.1.1   First official release for Grunt 0.4.0.
  * 2013-02-04   v0.1.1rc8   Added new options: basePath specify, debugInfo.
  * 2013-01-24   v0.1.1rc7   Updating grunt/gruntplugin dependencies to rc7. Changing in-development grunt/gruntplugin dependency versions from tilde version ranges to specific versions.
@@ -220,4 +221,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Fri Feb 15 2013 17:35:07.*
+*This file was generated on Sun Feb 17 2013 21:35:42.*
