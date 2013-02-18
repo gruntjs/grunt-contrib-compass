@@ -5,10 +5,18 @@
 
 
 ## Getting Started
+This plugin requires Grunt `~0.4.0`
+
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
 npm install grunt-contrib-compass --save-dev
+```
+
+One the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
+
+```js
+grunt.loadNpmTasks('grunt-contrib-compass');
 ```
 
 
@@ -210,7 +218,7 @@ grunt.initConfig({
 
 ## Release History
 
- * 2013-02-16   v0.1.2   Ensure Gruntfile.js is included.
+ * 2013-02-16   v0.1.2   Ensure Gruntfile.js is included on npm.
  * 2013-02-14   v0.1.1   First official release for Grunt 0.4.0.
  * 2013-02-04   v0.1.1rc8   Added new options: basePath specify, debugInfo.
  * 2013-01-24   v0.1.1rc7   Updating grunt/gruntplugin dependencies to rc7. Changing in-development grunt/gruntplugin dependency versions from tilde version ranges to specific versions.
@@ -221,4 +229,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Sun Feb 17 2013 21:35:42.*
+*This file was generated on Mon Feb 18 2013 08:36:16.*
