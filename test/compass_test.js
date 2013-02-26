@@ -42,7 +42,7 @@ exports.compass = {
     };
 
     test.deepEqual(compass.buildArgsArray(dataSet),
-      ['bundle', 'exec', 'compile'],
+      ['bundle', 'exec', 'compass', 'compile'],
       'should return the correct command.');
 
     test.done();
@@ -58,7 +58,7 @@ exports.compass = {
     };
 
     test.deepEqual(compass.buildArgsArray(dataSet),
-      ['compile', 'myproject'],
+      ['compass', 'compile', 'myproject'],
       'should return the correct command.');
 
     test.done();
@@ -75,7 +75,7 @@ exports.compass = {
     };
 
     test.deepEqual(compass.buildArgsArray(dataSet),
-      ['compile', 'test/fixtures/compile.scss'],
+      ['compass', 'compile', 'test/fixtures/compile.scss'],
       'should return the correct command.');
 
     test.done();

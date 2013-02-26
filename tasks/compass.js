@@ -15,7 +15,7 @@ module.exports = function (grunt) {
 
   function compile(args, cb) {
     var child = grunt.util.spawn({
-      cmd: process.platform === 'win32' ? 'compass.bat' : 'compass',
+      cmd: args.shift(),
       args: args
     }, function (err, result, code) {
       if (code === 127) {
