@@ -18,6 +18,12 @@ exports.init = function( grunt ) {
       grunt.fail.fatal('The options `raw` and `config` are mutually exclusive');
     }
 
+    if (process.platform === 'win32') {
+      args.unshift('compass.bat')
+    } else {
+      args.unshift('compass')
+    } 
+
     if (options.bundleExec) {
       args.unshift('bundle', 'exec');
     }
