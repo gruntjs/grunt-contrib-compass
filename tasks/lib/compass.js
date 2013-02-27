@@ -1,11 +1,10 @@
-
-exports.init = function( grunt ) {
+exports.init = function (grunt) {
   'use strict';
 
   var exports = {};
 
   // build the array of arguments to build the compass command
-  exports.buildArgsArray = function(options) {
+  exports.buildArgsArray = function (options) {
     var helpers = require('grunt-lib-contrib').init(grunt);
     var args = ['compile'];
     var raw = options.raw;
@@ -19,10 +18,10 @@ exports.init = function( grunt ) {
     }
 
     if (process.platform === 'win32') {
-      args.unshift('compass.bat')
+      args.unshift('compass.bat');
     } else {
-      args.unshift('compass')
-    } 
+      args.unshift('compass');
+    }
 
     if (options.bundleExec) {
       args.unshift('bundle', 'exec');
