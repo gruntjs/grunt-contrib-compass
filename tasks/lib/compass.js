@@ -32,11 +32,9 @@ exports.init = function (grunt) {
     }
 
     if (options.specify) {
-      var files = grunt.file.expand({
-        filter: function (filePath) {
-          return path.basename(filePath)[0] !== '_';
-        }
-      }, options.specify);
+      var files = grunt.file.expand(options.specify).filter(function(filepath){
+        return !filepath.split('/').pop().match(/^_/);
+      });
 
       if (files.length > 0) {
         [].push.apply(args, files);
