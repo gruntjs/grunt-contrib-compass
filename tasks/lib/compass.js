@@ -5,25 +5,75 @@ exports.init = function (grunt) {
 
   var exports = {};
 
-  // create a config file on the fly if there are arguments not supported as
+  function camelCaseToUnderscore(str) {
+    return str
+      .replace(/([a-z])([A-Z])/g, '$1_$2')
+      .toLowerCase();
+  }
+
+  // Extracts the options that cannot be used as CLI parameter but only
+  // as 'raw' arguments.
+  // Returns an object: {raw: str, options: []} with the raw string to be
+  // used to generate a config and the list of used options.
+  exports.extractRawOptions = function extractRawOptions(options) {
+    var raw = options.raw || '';
+    var supportedOptions = [
+      'http_path',
+      'css_path',
+      'http_stylesheets_path',
+      'sass_path',
+      'images_path',
+      'http_images_path',
+      'generated_images_dir',
+      'generated_images_path',
+      'http_generated_images_path',
+      'javascripts_path',
+      'http_javascripts_path',
+      'preferred_syntax',
+      'fonts_path',
+      'http_fonts_path',
+      'http_fonts_dir'
+    ];
+
+    var usedOptions = Object.keys(options).filter(function (option) {
+      var underscoredOption = camelCaseToUnderscore(option);
+      if (supportedOptions.indexOf(underscoredOption) >= 0) {
+        // naively escape double-quotes in the value
+        var value = options[option].replace(/"/, '\\"');
+        raw += underscoredOption + ' = "' + value + '"\n';
+        delete options[option];
+
+        return true;
+      }
+    });
+
+    return {raw: raw, options: usedOptions};
+  };
+
+  // Create a config file on the fly if there are arguments not supported as
   // CLI, returns a function that runs within the temprorary context.
   exports.buildConfigContext = function (options) {
-    var raw = options.raw;
-    if (raw && options.config) {
-      grunt.fail.fatal('The options `raw` and `config` are mutually exclusive');
+    var rawOptions = exports.extractRawOptions(options);
+    if (options.raw && options.config) {
+      grunt.fail.warn('The options `raw` and `config` are mutually exclusive');
+    }
+
+    if (rawOptions.options.length > 0 && options.config) {
+      grunt.fail.warn('The option `config` cannot be combined with ' +
+                       'these options: ' + rawOptions.options.join(', ') + '.');
     }
 
     delete options.raw;
 
     return function configContext(cb) {
-      if (raw) {
+      if (rawOptions.raw) {
         tmp.file(function (err, path, fd) {
           if (err) {
             return cb(err);
           }
 
           // Dynamically create config.rb as a tmp file for the `raw` content
-          fs.writeSync(fd, new Buffer(raw), 0, raw.length);
+          fs.writeSync(fd, new Buffer(rawOptions.raw), 0, rawOptions.raw.length);
           cb(null, path);
         });
       } else {

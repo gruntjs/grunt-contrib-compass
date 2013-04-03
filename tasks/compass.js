@@ -51,7 +51,7 @@ module.exports = function (grunt) {
 
     configContext(function (err, path) {
       if (err) {
-        grunt.fail.fatal(err);
+        grunt.fail.warn(err);
       }
 
       if (path) {
