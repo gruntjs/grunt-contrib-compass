@@ -18,6 +18,8 @@ module.exports = function (grunt) {
       cmd: args.shift(),
       args: args
     }, function (err, result, code) {
+      var success = code === 0;
+
       if (code === 127) {
         return grunt.warn(
           'You need to have Ruby and Compass installed ' +
@@ -25,9 +27,16 @@ module.exports = function (grunt) {
           'More info: https://github.com/gruntjs/grunt-contrib-compass'
         );
       }
-      // `compass compile` exits with 1 when it has nothing to compile
+
+      // `compass compile` exits with 1 and outputs "Nothing to compile"
+      // on stderr when it has nothing to compile.
       // https://github.com/chriseppstein/compass/issues/993
-      cb((code === 0 || !/Nothing to compile/g.test(result.stdout)) || result.stderr);
+      // Don't fail the task in this situation.
+      if (code === 1 && /Nothing to compile/g.test(result.stderr)) {
+        success = true;
+      }
+
+      cb(success);
     });
     child.stdout.pipe(process.stdout);
     child.stderr.pipe(process.stderr);
