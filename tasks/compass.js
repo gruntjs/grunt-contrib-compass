@@ -10,8 +10,6 @@
 
 module.exports = function (grunt) {
   var compass = require('./lib/compass').init(grunt);
-  var fs = require('fs');
-  var tmp = require('tmp');
 
   function compile(args, cb) {
     var child = grunt.util.spawn({
@@ -45,24 +43,22 @@ module.exports = function (grunt) {
   grunt.registerMultiTask('compass', 'Compile Compass to CSS', function () {
     var options = this.options();
     var cb = this.async();
-    var raw = options.raw;
+    // create a temporary config file if there are 'raw' options or
+    // settings not supported as CLI arguments
+    var configContext = compass.buildConfigContext(options);
     // get the array of arguments for the compass command
     var args = compass.buildArgsArray(options);
 
-    if (raw) {
-      tmp.file(function (err, path, fd) {
-        if (err) {
-          grunt.fail.fatal(err);
-        }
+    configContext(function (err, path) {
+      if (err) {
+        grunt.fail.fatal(err);
+      }
 
-        // Dynamically create config.rb as a tmp file for the `raw` content
-        fs.writeSync(fd, new Buffer(raw), 0, raw.length);
-
+      if (path) {
         args.push('--config', path);
-        compile(args, cb);
-      });
-    } else {
+      }
+
       compile(args, cb);
-    }
+    });
   });
 };

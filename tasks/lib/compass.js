@@ -1,21 +1,45 @@
 exports.init = function (grunt) {
   'use strict';
+  var fs = require('fs');
+  var tmp = require('tmp');
 
   var exports = {};
+
+  // create a config file on the fly if there are arguments not supported as
+  // CLI, returns a function that runs within the temprorary context.
+  exports.buildConfigContext = function (options) {
+    var raw = options.raw;
+    if (raw && options.config) {
+      grunt.fail.fatal('The options `raw` and `config` are mutually exclusive');
+    }
+
+    delete options.raw;
+
+    return function configContext(cb) {
+      if (raw) {
+        tmp.file(function (err, path, fd) {
+          if (err) {
+            return cb(err);
+          }
+
+          // Dynamically create config.rb as a tmp file for the `raw` content
+          fs.writeSync(fd, new Buffer(raw), 0, raw.length);
+          cb(null, path);
+        });
+      } else {
+        cb(null, null);
+      }
+    };
+  };
 
   // build the array of arguments to build the compass command
   exports.buildArgsArray = function (options) {
     var helpers = require('grunt-lib-contrib').init(grunt);
     var args = ['compile'];
-    var raw = options.raw;
     var basePath = options.basePath;
     var path = require('path');
 
     grunt.verbose.writeflags(options, 'Options');
-
-    if (raw && options.config) {
-      grunt.fail.fatal('The options `raw` and `config` are mutually exclusive');
-    }
 
     if (process.platform === 'win32') {
       args.unshift('compass.bat');
@@ -46,7 +70,6 @@ exports.init = function (grunt) {
     }
 
     // don't want these as CLI flags
-    delete options.raw;
     delete options.bundleExec;
     delete options.basePath;
     delete options.specify;
