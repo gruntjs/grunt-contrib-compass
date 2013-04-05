@@ -51,6 +51,11 @@ module.exports = function (grunt) {
           raw: 'sass_dir = "test/fixtures"\ncss_dir = "tmp3"'
         }
       },
+      compileNothing: {
+        options: {
+          sassDir: 'test/doesnt-exist',
+        }
+      },
       options: {
           outputStyle: 'compressed'
       }
