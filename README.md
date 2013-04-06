@@ -135,6 +135,10 @@ Turn off colorized output.
 
 Run `compass compile` with [bundle exec](http://gembundler.com/man/bundle-exec.1.html): `bundle exec compass compile`.
 
+#### clean ```boolean```
+
+Remove generated files and the sass cache. Runs `compass clean` instead of `compass compile`.
+
 
 [config]: http://compass-style.org/help/tutorials/configuration-reference/
 
@@ -230,4 +234,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Wed Feb 27 2013 23:08:31.*
+*This file was generated on Sat Apr 06 2013 19:18:22.*

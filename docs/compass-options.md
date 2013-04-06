@@ -102,5 +102,9 @@ Turn off colorized output.
 
 Run `compass compile` with [bundle exec](http://gembundler.com/man/bundle-exec.1.html): `bundle exec compass compile`.
 
+## clean ```boolean```
+
+Remove generated files and the sass cache. Runs `compass clean` instead of `compass compile`.
+
 
 [config]: http://compass-style.org/help/tutorials/configuration-reference/

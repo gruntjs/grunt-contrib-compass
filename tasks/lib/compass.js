@@ -85,7 +85,7 @@ exports.init = function (grunt) {
   // build the array of arguments to build the compass command
   exports.buildArgsArray = function (options) {
     var helpers = require('grunt-lib-contrib').init(grunt);
-    var args = ['compile'];
+    var args = [options.clean ? 'clean' : 'compile'];
     var basePath = options.basePath;
     var path = require('path');
 
@@ -120,6 +120,7 @@ exports.init = function (grunt) {
     }
 
     // don't want these as CLI flags
+    delete options.clean;
     delete options.bundleExec;
     delete options.basePath;
     delete options.specify;

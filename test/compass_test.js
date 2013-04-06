@@ -1,5 +1,5 @@
 'use strict';
-
+var fs = require('fs');
 var grunt = require('grunt');
 var compass = require('../tasks/lib/compass').init(grunt);
 
@@ -88,10 +88,18 @@ exports.compass = {
     };
 
     var raw = compass.extractRawOptions(options);
+
+    test.expect(3);
+
     // all but the unsupported options are removed.
     test.equal(Object.keys(options).length, 1);
     test.equal(raw.raw, 'images_path = "/app/images"\nhttp_images_path = "/path/\\"with/quotes"\n');
     test.deepEqual(raw.options, ['imagesPath', 'httpImagesPath']);
+    test.done();
+  },
+  clean: function (test) {
+    test.expect(1);
+    test.equal(fs.existsSync('../.sass-cache'), false);
     test.done();
   }
 };

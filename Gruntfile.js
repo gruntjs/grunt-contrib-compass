@@ -56,8 +56,13 @@ module.exports = function (grunt) {
           sassDir: 'test/doesnt-exist',
         }
       },
+      clean: {
+        options: {
+          clean: true
+        }
+      },
       options: {
-          outputStyle: 'compressed'
+        outputStyle: 'compressed'
       }
     },
 
