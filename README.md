@@ -91,6 +91,62 @@ Make Compass asset helpers generate relative urls to assets.
 
 Disable line comments.
 
+#### httpPath ```string```
+
+The path to the project when running within the web server. Defaults to "/".
+
+#### cssPath ```string```
+
+The directory where the css stylesheets are kept. It is relative to the `projectPath`. Defaults to "stylesheets".
+
+#### httpStylesheetsPath ```string```
+
+The full http path to stylesheets on the web server. Defaults to `httpPath + "/" + cssDir`.
+
+#### sassPath ```string```
+
+The directory where the sass stylesheets are kept. It is relative to the `projectPath`. Defaults to "sass".
+
+#### imagesPath ```string```
+
+The directory where the images are kept. It is relative to the projectPath. Defaults to "images".
+
+#### httpImagesPath ```string```
+
+The full http path to images on the web server. Defaults to `httpPath + "/" + imagesDir`.
+
+#### generatedImagesDir ```string```
+
+The directory where generated images are kept. It is relative to the `projectPath`. Defaults to the value of `imagesDir`.
+
+#### generatedImagesPath ```string```
+
+The full path to where generated images are kept. Defaults to the value of `projectPath/generatedImagesDir`.
+
+#### httpGeneratedImagesPath ```string```
+
+The full http path to generated images on the web server. Defaults to `httpPath + "/" + generatedImagesDir`.
+
+#### javascriptsPath ```string```
+
+The full path to where javascripts are kept. Defaults to `projectPath/javascriptsDir`.
+
+#### httpJavascriptsPath ```string```
+
+The full http path to javascripts on the web server. Defaults to `httpPath + "/" + javascriptsDir`.
+
+#### fontsPath ```string```
+
+The full path to where font files are kept. Defaults to `projectPath/fontsDir`.
+
+#### httpFontsPath ```string```
+
+The full http path to font files on the web server.
+
+#### httpFontsDir ```string```
+
+The relative http path to font files on the web server.
+
 #### require ```string|array```
 
 Require the given Ruby library before running commands. This is used to access Compass plugins without having a project configuration file.
@@ -234,4 +290,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Sat Apr 06 2013 19:18:22.*
+*This file was generated on Sun Apr 07 2013 16:30:37.*
