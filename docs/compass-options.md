@@ -2,163 +2,257 @@
 
 Compass doesn't expose all of its [options][config] through the CLI, which this task makes use of. If you need an option not mentioned below you can either specify a path to a config.rb file in the `config` option or embed it directly into the `raw` option. Options defined in your Gruntfile will override those specified in your config.rb or `raw` property. `config` and `raw` are mutually exclusive.
 
-## config ```string```
+## config
 
-Specify the location of the Compass [configuration file][config] explicitly. Defaults to the same path as your Gruntfile.
+Type: `String`
+Default: same path as your Gruntfile
 
-## raw ```string```
+Specify the location of the Compass [configuration file][config] explicitly.
+
+## raw
+
+Type: `String`
 
 String form of the Compass [configuration file][config].
 
-## basePath ```string```
+## basePath
+
+Type: `String`
 
 The the path Compass will run from. Defaults to the same path as your Gruntfile.
 
-## app ```string```
+## app
 
-Tell compass what kind of application it is integrating with. Can be `stand_alone` (default) or `rails`.
+Type: `String`
+Default: `stand_alone`
 
-## sassDir ```string```
+Tell compass what kind of application it is integrating with. Can be `stand_alone` or `rails`.
+
+## sassDir
+
+Type: `String`
 
 The source directory where you keep your Sass stylesheets.
 
-## cssDir ```string```
+## cssDir
+
+Type: `String`
 
 The target directory where you keep your CSS stylesheets.
 
-## specify ```string|array```
+## specify
+
+Type: `String|Array`
 
 Lets you specify which files you want to compile. Useful if you don't want to compile the whole folder. Globbing supported. Ignores filenames starting with underscore. Files must be in the directory you specified in `sassDir`.
 
-## imagesDir ```string```
+## imagesDir
+
+Type: `String`
 
 The directory where you keep your images.
 
-## javascriptsDir ```string```
+## javascriptsDir
+
+Type: `String`
 
 The directory where you keep your JavaScript files.
 
-## fontsDir ```string```
+## fontsDir
+
+Type: `String`
 
 The directory where you keep your fonts.
 
-## environment ```string```
+## environment
 
-Use sensible defaults for your current environment. Can be: `development` (default) or `production`
+Type: `String`
+Default: `development`
 
-## outputStyle ```string```
+Use sensible defaults for your current environment. Can be: `development` or `production`
+
+## outputStyle
+
+Type: `String`
 
 CSS output mode. Can be: `nested`, `expanded`, `compact`, `compressed`.
 
-## relativeAssets ```boolean```
+## relativeAssets
+
+Type: `Boolean`
 
 Make Compass asset helpers generate relative urls to assets.
 
-## noLineComments ```boolean```
+## noLineComments
+
+Type: `Boolean`
 
 Disable line comments.
 
-## httpPath ```string```
+## httpPath
 
-The path to the project when running within the web server. Defaults to "/".
+Type: `String`
+Default: `/`
 
-## cssPath ```string```
+The path to the project when running within the web server.
+
+## cssPath
+
+Type: `String`
 
 The directory where the css stylesheets are kept. It is relative to the `projectPath`. Defaults to "stylesheets".
 
-## httpStylesheetsPath ```string```
+## httpStylesheetsPath
 
-The full http path to stylesheets on the web server. Defaults to `httpPath + "/" + cssDir`.
+Type: `String`
+Default: `httpPath + "/" + cssDir`
 
-## sassPath ```string```
+The full http path to stylesheets on the web server.
 
-The directory where the sass stylesheets are kept. It is relative to the `projectPath`. Defaults to "sass".
+## sassPath
 
-## imagesPath ```string```
+Type: `String`
+Default: `sass`
 
-The directory where the images are kept. It is relative to the projectPath. Defaults to "images".
+The directory where the sass stylesheets are kept. It is relative to the `projectPath`.
 
-## httpImagesPath ```string```
+## imagesPath
 
-The full http path to images on the web server. Defaults to `httpPath + "/" + imagesDir`.
+Type: `String`
+Default: `images`
 
-## generatedImagesDir ```string```
+The directory where the images are kept. It is relative to the projectPath.
 
-The directory where generated images are kept. It is relative to the `projectPath`. Defaults to the value of `imagesDir`.
+## httpImagesPath
 
-## generatedImagesPath ```string```
+Type: `String`
+Default: `httpPath + "/" + imagesDir`
 
-The full path to where generated images are kept. Defaults to the value of `projectPath/generatedImagesDir`.
+The full http path to images on the web server.
 
-## httpGeneratedImagesPath ```string```
+## generatedImagesDir
 
-The full http path to generated images on the web server. Defaults to `httpPath + "/" + generatedImagesDir`.
+Type: `String`
+Default: value of `imagesDir`
 
-## javascriptsPath ```string```
+The directory where generated images are kept. It is relative to the `projectPath`.
 
-The full path to where javascripts are kept. Defaults to `projectPath/javascriptsDir`.
+## generatedImagesPath
 
-## httpJavascriptsPath ```string```
+Type: `String`
+Default: value of `projectPath/generatedImagesDir`
 
-The full http path to javascripts on the web server. Defaults to `httpPath + "/" + javascriptsDir`.
+The full path to where generated images are kept.
 
-## fontsPath ```string```
+## httpGeneratedImagesPath
 
-The full path to where font files are kept. Defaults to `projectPath/fontsDir`.
+Type: `String`
+Default: `httpPath + "/" + generatedImagesDir`
 
-## httpFontsPath ```string```
+The full http path to generated images on the web server.
+
+## javascriptsPath
+
+Type: `String`
+Default: `projectPath/javascriptsDir`
+
+The full path to where javascripts are kept.
+
+## httpJavascriptsPath
+
+Type: `String`
+Default: `httpPath + "/" + javascriptsDir`
+
+The full http path to javascripts on the web server.
+
+## fontsPath
+
+Type: `String`
+Default: `projectPath/fontsDir`
+
+The full path to where font files are kept.
+
+## httpFontsPath
+
+Type: `String`
 
 The full http path to font files on the web server.
 
-## httpFontsDir ```string```
+## httpFontsDir
+
+Type: `String`
 
 The relative http path to font files on the web server.
 
-## require ```string|array```
+## require
+
+Type: `String|Array`
 
 Require the given Ruby library before running commands. This is used to access Compass plugins without having a project configuration file.
 
-## load ```string|array```
+## load
+
+Type: `String|Array`
 
 Load the framework or extensions found in the specified directory.
 
-## loadAll ```string|array```
+## loadAll
+
+Type: `String|Array`
 
 Load all the frameworks or extensions found in the specified directory.
 
-## importPath ```string|array```
+## importPath
+
+Type: `String|Array`
 
 Makes files under the specified folder findable by Sass's @import directive.
 
-## debugInfo ```boolean```
+## debugInfo
+
+Type: `Boolean`
 
 Causes the line number and file where a selector is defined to be emitted into the compiled CSS in a format that can be understood by the browser. Automatically disabled when using `outputStyle: 'compressed'`.
 
-## quiet ```boolean```
+## quiet
+
+Type: `Boolean`
 
 Quiet mode.
 
-## trace ```boolean```
+## trace
+
+Type: `Boolean`
 
 Show a full stacktrace on error.
 
-## force ```boolean```
+## force
+
+Type: `Boolean`
 
 Allows Compass to overwrite existing files.
 
-## dryRun ```boolean```
+## dryRun
+
+Type: `Boolean`
 
 Dry Run. Tells you what it plans to do.
 
-## boring ```boolean```
+## boring
+
+Type: `Boolean`
 
 Turn off colorized output.
 
-## bundleExec ```boolean```
+## bundleExec
+
+Type: `Boolean`
 
 Run `compass compile` with [bundle exec](http://gembundler.com/man/bundle-exec.1.html): `bundle exec compass compile`.
 
-## clean ```boolean```
+## clean
+
+Type: `Boolean`
 
 Remove generated files and the sass cache. Runs `compass clean` instead of `compass compile`.
 
