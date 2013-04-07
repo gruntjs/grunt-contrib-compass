@@ -29,7 +29,6 @@ exports.init = function (grunt) {
       'http_generated_images_path',
       'javascripts_path',
       'http_javascripts_path',
-      'preferred_syntax',
       'fonts_path',
       'http_fonts_path',
       'http_fonts_dir'
