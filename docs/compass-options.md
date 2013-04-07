@@ -156,7 +156,7 @@ Turn off colorized output.
 
 ## bundleExec ```boolean```
 
-Run `compass compile` with [bundle exec](http://gembundler.com/man/bundle-exec.1.html): `bundle exec compass compile`.
+Run `compass compile` with [bundle exec](http://gembundler.com/v1.3/man/bundle-exec.1.html): `bundle exec compass compile`.
 
 ## clean ```boolean```
 
