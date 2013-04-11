@@ -40,7 +40,7 @@ module.exports = function (grunt) {
     child.stderr.pipe(process.stderr);
   }
 
-  grunt.registerMultiTask('compass', 'Compile Compass to CSS', function () {
+  grunt.registerMultiTask('compass', 'Compile Sass to CSS using Compass', function () {
     var options = this.options();
     var cb = this.async();
     // create a temporary config file if there are 'raw' options or
