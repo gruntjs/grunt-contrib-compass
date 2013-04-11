@@ -2,7 +2,7 @@
 
 > Compile Sass to CSS using Compass
 
-[Compass](http://compass-style.org/) is an open-source authoring framework for the [Sass](http://sass-lang.com/) css preprocessor. It helps you build stylesheets faster with a huge library of Sass mixins and functions, advanced tools for spriting, and workflow improvements including file based Sass configuration and a simple pattern for building and using Compass extensions.
+
 
 ## Getting Started
 This plugin requires Grunt `~0.4.0`
@@ -25,11 +25,11 @@ grunt.loadNpmTasks('grunt-contrib-compass');
 ## Compass task
 _Run this task with the `grunt compass` command._
 
-This task requires you to have [Ruby](http://www.ruby-lang.org/en/downloads/), [Sass](http://sass-lang.com/tutorial.html), and [Compass](http://compass-style.org/install/) installed. If you're on OS X or Linux you probably already have Ruby installed; test with `ruby -v` in your terminal. When you've confirmed you have Ruby installed, run `gem update --system && gem install compass` to install Compass and Sass.
+[Compass](http://compass-style.org/) is an open-source authoring framework for the [Sass](http://sass-lang.com/) css preprocessor. It helps you build stylesheets faster with a huge library of Sass mixins and functions, advanced tools for spriting, and workflow improvements including file based Sass configuration and a simple pattern for building and using Compass extensions.
+
+This task requires you to have [Ruby](http://www.ruby-lang.org/en/downloads/), [Sass](http://sass-lang.com/tutorial.html), and [Compass](http://compass-style.org/install/) >=0.12.2 installed. If you're on OS X or Linux you probably already have Ruby installed; test with `ruby -v` in your terminal. When you've confirmed you have Ruby installed, run `gem update --system && gem install compass` to install Compass and Sass.
 
 Compass operates on a folder level. Because of this you don't specify any src/dest, but instead define the `sassDir` and `cssDir` options.
-
-_This plugin is only compatible with Grunt `>= 0.4.x`._
 
 ### Options
 
@@ -37,7 +37,7 @@ Compass doesn't expose all of its [options][config] through the CLI, which this 
 
 #### config
 
-Type: `String`
+Type: `String`  
 Default: same path as your Gruntfile
 
 Specify the location of the Compass [configuration file][config] explicitly.
@@ -56,7 +56,7 @@ The the path Compass will run from. Defaults to the same path as your Gruntfile.
 
 #### app
 
-Type: `String`
+Type: `String`  
 Default: `stand_alone`
 
 Tell compass what kind of application it is integrating with. Can be `stand_alone` or `rails`.
@@ -99,7 +99,7 @@ The directory where you keep your fonts.
 
 #### environment
 
-Type: `String`
+Type: `String`  
 Default: `development`
 
 Use sensible defaults for your current environment. Can be: `development` or `production`
@@ -124,7 +124,7 @@ Disable line comments.
 
 #### httpPath
 
-Type: `String`
+Type: `String`  
 Default: `/`
 
 The path to the project when running within the web server.
@@ -137,70 +137,70 @@ The directory where the css stylesheets are kept. It is relative to the `project
 
 #### httpStylesheetsPath
 
-Type: `String`
+Type: `String`  
 Default: `httpPath + "/" + cssDir`
 
 The full http path to stylesheets on the web server.
 
 #### sassPath
 
-Type: `String`
+Type: `String`  
 Default: `sass`
 
 The directory where the sass stylesheets are kept. It is relative to the `projectPath`.
 
 #### imagesPath
 
-Type: `String`
+Type: `String`  
 Default: `images`
 
 The directory where the images are kept. It is relative to the projectPath.
 
 #### httpImagesPath
 
-Type: `String`
+Type: `String`  
 Default: `httpPath + "/" + imagesDir`
 
 The full http path to images on the web server.
 
 #### generatedImagesDir
 
-Type: `String`
+Type: `String`  
 Default: value of `imagesDir`
 
 The directory where generated images are kept. It is relative to the `projectPath`.
 
 #### generatedImagesPath
 
-Type: `String`
+Type: `String`  
 Default: value of `projectPath/generatedImagesDir`
 
 The full path to where generated images are kept.
 
 #### httpGeneratedImagesPath
 
-Type: `String`
+Type: `String`  
 Default: `httpPath + "/" + generatedImagesDir`
 
 The full http path to generated images on the web server.
 
 #### javascriptsPath
 
-Type: `String`
+Type: `String`  
 Default: `projectPath/javascriptsDir`
 
 The full path to where javascripts are kept.
 
 #### httpJavascriptsPath
 
-Type: `String`
+Type: `String`  
 Default: `httpPath + "/" + javascriptsDir`
 
 The full http path to javascripts on the web server.
 
 #### fontsPath
 
-Type: `String`
+Type: `String`  
 Default: `projectPath/fontsDir`
 
 The full path to where font files are kept.
@@ -384,4 +384,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Mon Apr 08 2013 10:25:50.*
+*This file was generated on Thu Apr 11 2013 18:47:58.*

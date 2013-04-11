@@ -9,7 +9,7 @@ exports.compass = {
 
     var actual = grunt.file.read('tmp/compile.css');
     var expected = grunt.file.read('test/expected/compile.css');
-    test.equal(actual, expected, 'should compile Sass to CSS with Compass');
+    test.equal(actual, expected, 'should compile Sass to CSS using Compass');
 
     test.done();
   },
