@@ -2,6 +2,7 @@ exports.init = function (grunt) {
   'use strict';
   var fs = require('fs');
   var tmp = require('tmp');
+  var dargs = require('dargs');
 
   var exports = {};
 
@@ -62,8 +63,6 @@ exports.init = function (grunt) {
                        'these options: ' + rawOptions.options.join(', ') + '.');
     }
 
-    delete options.raw;
-
     return function configContext(cb) {
       if (rawOptions.raw) {
         tmp.file(function (err, path, fd) {
@@ -83,7 +82,6 @@ exports.init = function (grunt) {
 
   // build the array of arguments to build the compass command
   exports.buildArgsArray = function (options) {
-    var helpers = require('grunt-lib-contrib').init(grunt);
     var args = [options.clean ? 'clean' : 'compile'];
     var basePath = options.basePath;
     var path = require('path');
@@ -118,14 +116,14 @@ exports.init = function (grunt) {
       }
     }
 
-    // don't want these as CLI flags
-    delete options.clean;
-    delete options.bundleExec;
-    delete options.basePath;
-    delete options.specify;
-
     // add converted options
-    [].push.apply(args, helpers.optsToArgs(options));
+    [].push.apply(args, dargs(options, [
+      'raw',
+      'clean',
+      'bundleExec',
+      'basePath',
+      'specify'
+    ]));
 
     // Compass doesn't have a long flag for this option:
     // https://github.com/chriseppstein/compass/issues/1055
