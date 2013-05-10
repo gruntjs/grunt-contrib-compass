@@ -1,4 +1,4 @@
-# grunt-contrib-compass [![Build Status](https://secure.travis-ci.org/gruntjs/grunt-contrib-compass.png?branch=master)](http://travis-ci.org/gruntjs/grunt-contrib-compass)
+# grunt-contrib-compass [![Build Status](https://travis-ci.org/gruntjs/grunt-contrib-compass.png?branch=master)](https://travis-ci.org/gruntjs/grunt-contrib-compass)
 
 > Compile Sass to CSS using Compass
 
@@ -372,7 +372,7 @@ grunt.initConfig({
 
 ## Release History
 
- * 2014-04-11   v0.2.0   Add `clean` option. Expose `raw` options as Grunt options. Fix detection of `Nothing to compile` situation.
+ * 2013-04-11   v0.2.0   Add `clean` option. Expose `raw` options as Grunt options. Fix detection of `Nothing to compile` situation.
  * 2013-02-27   v0.1.3   Fixes bundleExec.
  * 2013-02-17   v0.1.2   Ensure Gruntfile.js is included on npm.
  * 2013-02-15   v0.1.1   First official release for Grunt 0.4.0.
@@ -385,4 +385,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Thu Apr 11 2013 18:51:53.*
+*This file was generated on Fri May 10 2013 09:20:10.*

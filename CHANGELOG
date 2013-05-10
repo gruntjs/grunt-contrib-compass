@@ -1,5 +1,5 @@
 v0.2.0:
-  date: 2014-04-11
+  date: 2013-04-11
   changes:
     - Add `clean` option.
     - Expose `raw` options as Grunt options.
