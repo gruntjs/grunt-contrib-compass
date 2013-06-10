@@ -195,7 +195,7 @@ The full http path to the ad-hoc extensions folder on the web server. This is us
 
 Type: `String`
 
-The relative http path to the ad-hoc extensions folder on the web server. *Only Compass >=0.13.*
+The relative http path to the ad-hoc extensions folder on the web server. *Only Compass >=0.12.2
 
 ## require
 
