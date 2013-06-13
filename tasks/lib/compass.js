@@ -32,7 +32,9 @@ exports.init = function (grunt) {
       'http_javascripts_path',
       'fonts_path',
       'http_fonts_path',
-      'http_fonts_dir'
+      'http_fonts_dir',
+      'extension_dir',
+      'extension_path'
     ];
 
     var usedOptions = Object.keys(options).filter(function (option) {
