@@ -1,3 +1,7 @@
+v0.3.0:
+  date: 2013-06-24
+  changes:
+    - Add `extensionDir` and `extensionPath` options. *Requires Compass >=0.12.2*.
 v0.2.0:
   date: 2013-04-11
   changes:

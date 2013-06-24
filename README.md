@@ -1,4 +1,4 @@
-# grunt-contrib-compass [![Build Status](https://travis-ci.org/gruntjs/grunt-contrib-compass.png?branch=master)](https://travis-ci.org/gruntjs/grunt-contrib-compass)
+# grunt-contrib-compass [![Build Status](https://secure.travis-ci.org/gruntjs/grunt-contrib-compass.png?branch=master)](http://travis-ci.org/gruntjs/grunt-contrib-compass)
 
 > Compile Sass to CSS using Compass
 
@@ -217,6 +217,19 @@ Type: `String`
 
 The relative http path to font files on the web server.
 
+#### extensionsPath
+
+Type: `String`  
+Default: `project_root/extensions`
+
+The full http path to the ad-hoc extensions folder on the web server. This is used to access compass plugins that have been installed directly to the project (e.g. through [Bower](https://github.com/bower/bower)) instead of globally as gems. *Only Compass >=0.12.2*
+
+#### extensionsDir
+
+Type: `String`
+
+The relative http path to the ad-hoc extensions folder on the web server. *Only Compass >=0.12.2*
+
 #### require
 
 Type: `String|Array`
@@ -372,6 +385,7 @@ grunt.initConfig({
 
 ## Release History
 
+ * 2013-06-24   v0.3.0   Add `extensionDir` and `extensionPath` options. *Requires Compass >=0.12.2*.
  * 2013-04-11   v0.2.0   Add `clean` option. Expose `raw` options as Grunt options. Fix detection of `Nothing to compile` situation.
  * 2013-02-27   v0.1.3   Fixes bundleExec.
  * 2013-02-17   v0.1.2   Ensure Gruntfile.js is included on npm.
@@ -385,4 +399,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Fri May 10 2013 09:20:10.*
+*This file was generated on Mon Jun 24 2013 21:01:45.*

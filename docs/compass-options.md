@@ -186,7 +186,7 @@ The relative http path to font files on the web server.
 
 ## extensionsPath
 
-Type: `String`
+Type: `String`  
 Default: `project_root/extensions`
 
 The full http path to the ad-hoc extensions folder on the web server. This is used to access compass plugins that have been installed directly to the project (e.g. through [Bower](https://github.com/bower/bower)) instead of globally as gems. *Only Compass >=0.12.2*
