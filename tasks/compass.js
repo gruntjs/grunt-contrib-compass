@@ -49,6 +49,9 @@ module.exports = function (grunt) {
       options.time = true;
     }
 
+    // create a function to retroactively add a banner to the top of the
+    // generated files, if specified
+    var bannerCallback = compass.buildBannerCallback(grunt, options);
     // create a temporary config file if there are 'raw' options or
     // settings not supported as CLI arguments
     var configContext = compass.buildConfigContext(options);
@@ -64,7 +67,10 @@ module.exports = function (grunt) {
         args.push('--config', path);
       }
 
-      compile(args, cb);
+      compile(args, function () {
+        bannerCallback();
+        cb();
+      });
     });
   });
 };

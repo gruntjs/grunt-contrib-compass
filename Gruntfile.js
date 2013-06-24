@@ -11,6 +11,9 @@
 module.exports = function (grunt) {
   // Project configuration.
   grunt.initConfig({
+    pkg: {
+      name: 'grunt-contrib-compass'
+    },
     jshint: {
       all: [
         'Gruntfile.js',
@@ -54,6 +57,14 @@ module.exports = function (grunt) {
       compileNothing: {
         options: {
           sassDir: 'test/doesnt-exist',
+        }
+      },
+      compileWithBanner: {
+        options: {
+          sassDir: 'test/fixtures',
+          cssDir: 'tmp4',
+          specify: 'test/fixtures/simple.sass',
+          banner: '/* <%= pkg.name %> banner */'
         }
       },
       clean: {

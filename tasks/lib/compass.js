@@ -3,6 +3,8 @@ exports.init = function (grunt) {
   var fs = require('fs');
   var tmp = require('tmp');
   var dargs = require('dargs');
+  var path = require('path');
+  var async = require('async');
 
   var exports = {};
 
@@ -52,6 +54,39 @@ exports.init = function (grunt) {
     return {raw: raw, options: usedOptions};
   };
 
+  // Create a function to add a banner, if requested through the options.
+  exports.buildBannerCallback = function (grunt, options) {
+    if (!options.specify || !options.banner) {
+      if (options.banner && !options.specify) {
+        grunt.fail.warn('You can only use the `banner` option in combination with `specify.`');
+      }
+      // Return a no-op if specify or banner aren't set.
+      return function () {};
+    }
+
+    var srcFiles = grunt.file.expand({
+      filter: function (filePath) {
+        return path.basename(filePath)[0] !== '_';
+      }
+    }, options.specify);
+
+    var banner = options.banner;
+    delete options.banner;
+
+    var destFiles = srcFiles.map(function (filename) {
+      return filename.replace(options.sassDir, options.cssDir).replace(/\.(scss|sass)$/i, '.css');
+    });
+
+    return function () {
+      grunt.log.verbose.writeln('Writing CSS banners.');
+      async.map(destFiles, function (filename) {
+        grunt.log.verbose.writeln('Writing CSS banner for ' + filename);
+        var content = grunt.file.read(filename);
+        grunt.file.write(filename, banner + grunt.util.linefeed + content);
+      });
+    };
+  };
+
   // Create a config file on the fly if there are arguments not supported as
   // CLI, returns a function that runs within the temprorary context.
   exports.buildConfigContext = function (options) {
@@ -86,7 +121,6 @@ exports.init = function (grunt) {
   exports.buildArgsArray = function (options) {
     var args = [options.clean ? 'clean' : 'compile'];
     var basePath = options.basePath;
-    var path = require('path');
 
     grunt.verbose.writeflags(options, 'Options');
 
