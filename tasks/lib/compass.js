@@ -84,7 +84,14 @@ exports.init = function (grunt) {
 
   // build the array of arguments to build the compass command
   exports.buildArgsArray = function (options) {
-    var args = [options.clean ? 'clean' : 'compile'];
+    var args = [];
+    if (options.clean) {
+        args.push('clean');
+    } else if (options.command) {
+        args.push(options.command);
+    } else {
+        args.push('compile');
+    }
     var basePath = options.basePath;
     var path = require('path');
 
@@ -124,7 +131,8 @@ exports.init = function (grunt) {
       'clean',
       'bundleExec',
       'basePath',
-      'specify'
+      'specify',
+      'command'
     ]));
 
     // Compass doesn't have a long flag for this option:
