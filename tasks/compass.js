@@ -43,6 +43,12 @@ module.exports = function (grunt) {
   grunt.registerMultiTask('compass', 'Compile Sass to CSS using Compass', function () {
     var options = this.options();
     var cb = this.async();
+
+    // display compilation time
+    if (!options.clean) {
+      options.time = true;
+    }
+
     // create a temporary config file if there are 'raw' options or
     // settings not supported as CLI arguments
     var configContext = compass.buildConfigContext(options);
