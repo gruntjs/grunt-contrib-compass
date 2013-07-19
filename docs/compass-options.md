@@ -21,6 +21,14 @@ Type: `String`
 
 The the path Compass will run from. Defaults to the same path as your Gruntfile.
 
+#### banner
+
+Type: `String`
+
+Prepend the specified string to the output file. Useful for licensing
+information. **Note:** This only works in combination with the `specify` option
+and can conflict with sourcemap generation.
+
 ## app
 
 Type: `String`  

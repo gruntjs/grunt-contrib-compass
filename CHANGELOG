@@ -1,3 +1,7 @@
+v0.4.0:
+  date: 2013-07-19
+  changes:
+    - Add `banner` option. Show compilation time.
 v0.3.0:
   date: 2013-06-24
   changes:
