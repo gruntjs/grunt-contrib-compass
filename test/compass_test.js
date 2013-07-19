@@ -31,6 +31,15 @@ exports.compass = {
 
     test.done();
   },
+  compileWithBanner: function (test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp4/simple.css');
+    var expected = grunt.file.read('test/expected/simple-banner.css');
+    test.equal(actual, expected, 'should include the banner specified');
+
+    test.done();
+  },
   bundleExec: function (test) {
     var dataSet;
 
