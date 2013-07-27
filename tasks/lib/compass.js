@@ -74,7 +74,7 @@ exports.init = function (grunt) {
     delete options.banner;
 
     var destFiles = srcFiles.map(function (filename) {
-      return filename.replace(options.sassDir, options.cssDir).replace(/\.(scss|sass)$/i, '.css');
+      return filename.replace(options.sassDir, options.cssDir).replace(/\.(css\.)?(scss|sass)$/i, '.css');
     });
 
     return function () {
