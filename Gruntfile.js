@@ -32,6 +32,7 @@ module.exports = function (grunt) {
         'tmp2',
         'tmp3',
         'tmp4',
+        'tmp5',
         '.sass-cache'
       ]
     },
@@ -65,6 +66,14 @@ module.exports = function (grunt) {
           sassDir: 'test/fixtures',
           cssDir: 'tmp4',
           specify: 'test/fixtures/simple.sass',
+          banner: '/* <%= pkg.name %> banner */'
+        }
+      },
+      compileCssScssExtensionWithBanner: {
+        options: {
+          sassDir: 'test/fixtures',
+          cssDir: 'tmp5',
+          specify: 'test/fixtures/extension.css.scss',
           banner: '/* <%= pkg.name %> banner */'
         }
       },
