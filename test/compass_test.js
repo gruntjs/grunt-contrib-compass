@@ -40,6 +40,15 @@ exports.compass = {
 
     test.done();
   },
+  compileCssScssExtensionWithBanner: function (test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp5/extension.css');
+    var expected = grunt.file.read('test/expected/extension.css');
+    test.equal(actual, expected, 'should include the banner specified');
+
+    test.done();
+  },
   bundleExec: function (test) {
     var dataSet;
 
@@ -84,7 +93,7 @@ exports.compass = {
     };
 
     test.deepEqual(compass.buildArgsArray(dataSet),
-      ['compass', 'compile', 'test/fixtures/compile.scss'],
+      ['compass', 'compile', 'test/fixtures/compile.scss', 'test/fixtures/extension.css.scss'],
       'should return the correct command.');
 
     test.done();
