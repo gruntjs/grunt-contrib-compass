@@ -1,3 +1,7 @@
+v0.4.1:
+  date: 2013-07-28
+  changes:
+    - Fix `banner` option with `.css.scss` files.
 v0.4.0:
   date: 2013-07-19
   changes:

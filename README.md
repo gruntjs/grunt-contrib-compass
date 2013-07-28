@@ -393,6 +393,7 @@ grunt.initConfig({
 
 ## Release History
 
+ * 2013-07-28   v0.4.1   Fix `banner` option with `.css.scss` files.
  * 2013-07-19   v0.4.0   Add `banner` option. Show compilation time.
  * 2013-06-24   v0.3.0   Add `extensionDir` and `extensionPath` options. *Requires Compass >=0.12.2*.
  * 2013-04-11   v0.2.0   Add `clean` option. Expose `raw` options as Grunt options. Fix detection of `Nothing to compile` situation.
@@ -408,4 +409,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Fri Jul 19 2013 13:08:34.*
+*This file was generated on Sun Jul 28 2013 03:03:53.*
