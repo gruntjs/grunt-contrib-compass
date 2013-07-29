@@ -238,6 +238,13 @@ Type: `String`
 
 The relative http path to the ad-hoc extensions folder on the web server. *Only Compass >=0.12.2*
 
+#### assetCacheBuster
+
+Type: `Boolean`  
+Default: `true`
+
+If set to `false`, this disables the default asset cache buster.
+
 #### require
 
 Type: `String|Array`

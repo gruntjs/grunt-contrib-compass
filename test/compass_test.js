@@ -115,6 +115,35 @@ exports.compass = {
     test.deepEqual(raw.options, ['imagesPath', 'httpImagesPath']);
     test.done();
   },
+  disableCacheBuster: function (test) {
+    var options = {
+      assetCacheBuster: false
+    };
+
+    var raw = compass.extractRawOptions(options);
+
+    test.expect(3);
+
+    test.equal(Object.keys(options).length, 0);
+    test.equal(raw.raw, 'asset_cache_buster :none');
+    test.deepEqual(raw.options, ['assetCacheBuster']);
+    test.done();
+  },
+  enableCacheBuster: function (test) {
+    var options = {
+      assetCacheBuster: true
+    };
+
+    var raw = compass.extractRawOptions(options);
+
+    test.expect(2);
+
+    test.equal(Object.keys(options).length, 0);
+    // There is no configuration generated for the case that we keep the cache
+    // buster enabled.
+    test.equal(raw.raw, '');
+    test.done();
+  },
   clean: function (test) {
     test.expect(1);
     test.equal(fs.existsSync('../.sass-cache'), false);
