@@ -48,6 +48,15 @@ exports.init = function (grunt) {
         delete options[option];
 
         return true;
+      } else if (underscoredOption === 'asset_cache_buster') {
+        // Special handling for asset_cache_buster as it doesn't take
+        // a string as argument, but either an inline-ruby block (which we don't
+        // support) or a `:none` symbol to disable it.
+        if (options[option] === false) {
+          raw += underscoredOption + ' :none';
+        }
+        delete options[option];
+        return true;
       }
     });
 
