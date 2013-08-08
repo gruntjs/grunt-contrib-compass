@@ -28,7 +28,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "tmp": "0.0.20",
+    "tmp": "0.0.21",
     "dargs": "~0.1.0",
     "async": "~0.2.0"
   },

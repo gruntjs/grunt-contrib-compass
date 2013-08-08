@@ -400,6 +400,7 @@ grunt.initConfig({
 
 ## Release History
 
+ * 2013-08-08   v0.5.0   Add `assetCacheBuster` option.
  * 2013-07-28   v0.4.1   Fix `banner` option with `.css.scss` files.
  * 2013-07-19   v0.4.0   Add `banner` option. Show compilation time.
  * 2013-06-24   v0.3.0   Add `extensionDir` and `extensionPath` options. *Requires Compass >=0.12.2*.
@@ -416,4 +417,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Sun Jul 28 2013 03:03:53.*
+*This file was generated on Thu Aug 08 2013 20:44:21.*
