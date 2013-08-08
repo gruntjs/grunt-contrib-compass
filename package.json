@@ -1,7 +1,7 @@
 {
   "name": "grunt-contrib-compass",
   "description": "Compile Sass to CSS using Compass",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "homepage": "https://github.com/gruntjs/grunt-contrib-compass",
   "author": {
     "name": "Grunt Team",
