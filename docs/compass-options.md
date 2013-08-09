@@ -21,7 +21,7 @@ Type: `String`
 
 The the path Compass will run from. Defaults to the same path as your Gruntfile.
 
-#### banner
+## banner
 
 Type: `String`
 
