@@ -11,10 +11,11 @@
 module.exports = function (grunt) {
   var compass = require('./lib/compass').init(grunt);
 
-  function compile(args, cb) {
+  function compile(args, opts, cb) {
     var child = grunt.util.spawn({
       cmd: args.shift(),
-      args: args
+      args: args,
+      opts: opts
     }, function (err, result, code) {
       var success = code === 0;
 
@@ -57,6 +58,7 @@ module.exports = function (grunt) {
     var configContext = compass.buildConfigContext(options);
     // get the array of arguments for the compass command
     var args = compass.buildArgsArray(options);
+    var opts = compass.buildOptsObject(options);
 
     configContext(function (err, path) {
       if (err) {
@@ -67,7 +69,7 @@ module.exports = function (grunt) {
         args.push('--config', path);
       }
 
-      compile(args, function () {
+      compile(args, opts, function () {
         bannerCallback();
         cb();
       });
