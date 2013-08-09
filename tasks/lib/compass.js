@@ -126,6 +126,37 @@ exports.init = function (grunt) {
     };
   };
 
+  // build the array of options to pass to the spawn call
+  exports.buildOptsObject = function (options) {
+    var opts = {};
+
+    if (options.cwd) {
+      opts.cwd = options.cwd;
+    }
+
+    if (options.stdio) {
+      opts.stdio = options.stdio;
+    }
+
+    if (options.env) {
+      opts.env = options.env;
+    }
+
+    if (options.detached) {
+      opts.detached = options.detached;
+    }
+
+    if (options.uid) {
+      opts.uid = options.uid;
+    }
+
+    if (options.gid) {
+      opts.gid = options.gid;
+    }
+
+    return opts;
+  };
+
   // build the array of arguments to build the compass command
   exports.buildArgsArray = function (options) {
     var args = [options.clean ? 'clean' : 'compile'];
@@ -167,7 +198,8 @@ exports.init = function (grunt) {
       'clean',
       'bundleExec',
       'basePath',
-      'specify'
+      'specify',
+      'cwd'
     ]));
 
     // Compass doesn't have a long flag for this option:
