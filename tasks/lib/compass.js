@@ -35,7 +35,7 @@ exports.init = function (grunt) {
       'fonts_path',
       'http_fonts_path',
       'http_fonts_dir',
-      'extension_dir',
+      'extensions_dir',
       'extension_path'
     ];
 
