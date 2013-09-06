@@ -178,6 +178,10 @@ exports.init = function (grunt) {
       });
     }
 
+    if (grunt.option('no-color')) {
+      args.push('--boring');
+    }
+
     return args;
   };
 
