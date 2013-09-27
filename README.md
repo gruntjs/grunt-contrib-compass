@@ -309,7 +309,13 @@ Turn off colorized output.
 
 Type: `Boolean`
 
-Run `compass compile` with [bundle exec](http://gembundler.com/v1.3/man/bundle-exec.1.html): `bundle exec compass compile`.
+Run Compass with [bundle exec](http://gembundler.com/v1.3/man/bundle-exec.1.html): `bundle exec compass compile`.
+
+#### watch
+
+Type: `Boolean`
+
+Runs `compass watch` instead of `compass compile`. This will use Compass's native watch command to listen for changes to Sass files and recompile your CSS on changes. While much faster than running `compass compile` each time you want to compile your Sass, Compass becomes a blocking task. This means that if you would like to use it in conjunction with another blocking task, such as `watch`, you will need to use it in conjunction with a paralleling task such as [Grunt Concurrent](https://github.com/sindresorhus/grunt-concurrent) or [Grunt Parallel](https://github.com/iammerrick/grunt-parallel).
 
 #### clean
 
