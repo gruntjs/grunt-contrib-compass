@@ -1,3 +1,8 @@
+v0.6.0:
+  date: 2013-10-04
+  changes:
+    - Add `watch` option.
+    - Fix Compass errors not propagating.
 v0.5.0:
   date: 2013-08-8
   changes:

@@ -1,4 +1,4 @@
-# grunt-contrib-compass [![Build Status](https://travis-ci.org/gruntjs/grunt-contrib-compass.png?branch=master)](https://travis-ci.org/gruntjs/grunt-contrib-compass)
+# grunt-contrib-compass v0.6.0 [![Build Status](https://travis-ci.org/gruntjs/grunt-contrib-compass.png?branch=master)](https://travis-ci.org/gruntjs/grunt-contrib-compass)
 
 > Compile Sass to CSS using Compass
 
@@ -54,7 +54,7 @@ Type: `String`
 
 The the path Compass will run from. Defaults to the same path as your Gruntfile.
 
-###### banner
+#### banner
 
 Type: `String`
 
@@ -309,19 +309,19 @@ Turn off colorized output.
 
 Type: `Boolean`
 
-Run Compass with [bundle exec](http://gembundler.com/v1.3/man/bundle-exec.1.html): `bundle exec compass compile`.
-
-#### watch
-
-Type: `Boolean`
-
-Runs `compass watch` instead of `compass compile`. This will use Compass's native watch command to listen for changes to Sass files and recompile your CSS on changes. While much faster than running `compass compile` each time you want to compile your Sass, Compass becomes a blocking task. This means that if you would like to use it in conjunction with another blocking task, such as `watch`, you will need to use it in conjunction with a paralleling task such as [Grunt Concurrent](https://github.com/sindresorhus/grunt-concurrent) or [Grunt Parallel](https://github.com/iammerrick/grunt-parallel).
+Run `compass compile` with [bundle exec](http://gembundler.com/v1.3/man/bundle-exec.1.html): `bundle exec compass compile`.
 
 #### clean
 
 Type: `Boolean`
 
 Remove generated files and the sass cache. Runs `compass clean` instead of `compass compile`.
+
+#### watch
+
+Type: `Boolean`
+
+Runs `compass watch` instead of `compass compile`. This will use Compass' native watch command to listen for changes to Sass files and recompile your CSS on changes. While much faster than running `compass compile` each time you want to compile your Sass, Compass becomes a blocking task. This means that if you would like to use it in conjunction with another blocking task, such as `watch`, you will need to use it in conjunction with a paralleling task such as [grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent).
 
 
 [config]: http://compass-style.org/help/tutorials/configuration-reference/
@@ -406,6 +406,7 @@ grunt.initConfig({
 
 ## Release History
 
+ * 2013-10-04   v0.6.0   Add `watch` option. Fix Compass errors not propagating.
  * 2013-08-08   v0.5.0   Add `assetCacheBuster` option.
  * 2013-07-28   v0.4.1   Fix `banner` option with `.css.scss` files.
  * 2013-07-19   v0.4.0   Add `banner` option. Show compilation time.
@@ -423,4 +424,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Thu Aug 08 2013 20:44:21.*
+*This file was generated on Fri Oct 04 2013 21:03:14.*
