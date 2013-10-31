@@ -36,6 +36,13 @@ Default: `stand_alone`
 
 Tell compass what kind of application it is integrating with. Can be `stand_alone` or `rails`.
 
+## binPath
+
+Type: `String`
+Default: `compass (compass.bat in win)`
+
+Defines full path to compass commpass command.
+
 ## sassDir
 
 Type: `String`

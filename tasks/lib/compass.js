@@ -139,11 +139,20 @@ exports.init = function (grunt) {
 
     grunt.verbose.writeflags(options, 'Options');
 
-    if (process.platform === 'win32') {
-      args.unshift('compass.bat');
+    var binPath;
+    if (typeof options.binPath === 'string') {
+        binPath = options.binPath;
+        // unlike other options, this one don't need to be passed
+        // to be passes to compass
+        delete options.binPath;
     } else {
-      args.unshift('compass');
+      if (process.platform === 'win32') {
+        binPath = 'compass.bat';
+      } else {
+        binPath = 'compass';
+      }
     }
+    args.unshift(binPath);
 
     if (options.bundleExec) {
       args.unshift('bundle', 'exec');
