@@ -403,6 +403,50 @@ grunt.initConfig({
 });
 ```
 
+#### Enforcing specific Compass/Sass versions
+
+When using Sass/Compass on a project with multiple developers, it's a good
+idea to make sure everyone is using the same version of Sass/Compass.
+
+Here's how to enforce it:
+
+1) Create a file called `Gemfile` in your project root (if not already created), and paste this in:
+
+```
+source 'http://rubygems.org'
+gem 'sass', '3.2.12'
+gem 'compass', '0.12.2'
+```
+
+(change the sass/compass version numbers to the ones you want to enforce... probably the latest)
+
+2) In your Gruntfile, add: `bundleExec: true` to your compass options like so:
+
+```js
+dev: {                  
+  options: {
+    bundleExec: true,
+    sassDir: "ui/src/scss",
+    cssDir: "ui/src/css"
+  }
+}
+```
+
+3) Anyone setting up this environment should run `bundle install` from the project root to make sure these specific versions are installed.
+
+In the future, if you want to enforce a newer version, just change the version numbers in the file above.  Then if someone with an older version tries to run `grunt compass`, they will get an error like:
+
+```
+$ grunt compass
+Running "compass:dist" (compass) task
+in `resolve': You have requested: (Bundler::GemNotFound)
+  sass = 3.2.13
+
+The bundle currently has sass locked at 3.2.12.
+Try running `bundle update sass`
+	from /Users/foo/.rvm/gems/ruby-1.9.3-p392/gems/bundler-1.3.5/lib/bundler/resolver.rb:168:in `start'
+Aborted due to warnings.
+```
 
 ## Release History
 
