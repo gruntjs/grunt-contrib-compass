@@ -18,7 +18,9 @@ module.exports = function (grunt) {
     }, function (err, result, code) {
       if (code === 127) {
         grunt.warn(
-          'You need to have Ruby and Compass installed ' +
+          'You need to have Ruby available through your system PATH.' +
+          'The same about Compass gem, which also should be available ' +
+          'through PATH or via binPath option ' + 
           'and in your system PATH for this task to work. ' +
           'More info: https://github.com/gruntjs/grunt-contrib-compass'
         );
