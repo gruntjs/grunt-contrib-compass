@@ -128,31 +128,40 @@ exports.init = function (grunt) {
 
   // build the array of arguments to build the compass command
   exports.buildArgsArray = function (options) {
-    var args = ['compile'];
-    if (options.clean) {
-      args = ['clean'];
-    } else if (options.watch) {
-      args = ['watch'];
-    }
+    var args = [];
+
 
     var basePath = options.basePath;
 
     grunt.verbose.writeflags(options, 'Options');
 
     var binPath;
-    if (typeof options.binPath === 'string') {
-        binPath = options.binPath;
-        // unlike other options, this one don't need to be passed
-        // to be passes to compass
-        delete options.binPath;
-    } else {
+    if (typeof options.binPath === 'undefined') {
       if (process.platform === 'win32') {
         binPath = 'compass.bat';
       } else {
         binPath = 'compass';
       }
+    } else {
+      binPath = options.binPath;
+      // unlike other options, this one don't need to be passed
+      // to be passes to compass
+      delete options.binPath;
     }
-    args.unshift(binPath);
+
+    if (Array.isArray(binPath)) {
+      args = binPath;
+    } else {
+      args = [binPath];
+    }
+
+    if (options.clean) {
+      args.push('clean');
+    } else if (options.watch) {
+      args.push('watch');
+    } else {
+      args.push('compile');
+    }
 
     if (options.bundleExec) {
       args.unshift('bundle', 'exec');

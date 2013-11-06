@@ -38,10 +38,13 @@ Tell compass what kind of application it is integrating with. Can be `stand_alon
 
 ## binPath
 
-Type: `String`
+Type: `String|Array`
 Default: `compass (compass.bat in win)`
 
 Defines full path to compass commpass command.
+In case binPath is array, all items with index > 0
+are treated as addisional arguments passed to command 
+(zero-indexed value).
 
 ## sassDir
 
