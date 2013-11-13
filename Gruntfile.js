@@ -12,7 +12,7 @@ module.exports = function (grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: {
-      name: 'grunt-contrib-compass'
+      name: 'grunt-shabunc-compass'
     },
     jshint: {
       all: [

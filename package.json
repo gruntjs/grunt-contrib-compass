@@ -1,5 +1,5 @@
 {
-  "name": "grunt-contrib-compass",
+  "name": "grunt-contrib-compass-shabunc",
   "description": "Compile Sass to CSS using Compass",
   "version": "0.6.0",
   "homepage": "https://github.com/gruntjs/grunt-contrib-compass",
