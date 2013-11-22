@@ -246,7 +246,7 @@ Default: `true`
 If set to `false`, this disables the default asset cache buster.
 
 
-#### cache_dir
+#### cacheDir
 
 Type: `String`
 
