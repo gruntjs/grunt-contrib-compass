@@ -67,7 +67,7 @@ exports.init = function (grunt) {
   exports.buildBannerCallback = function (grunt, options) {
     if (!options.specify || !options.banner) {
       if (options.banner && !options.specify) {
-        grunt.fail.warn('You can only use the `banner` option in combination with `specify.`');
+        grunt.warn('You can only use the `banner` option in combination with `specify.`');
       }
       // Return a no-op if specify or banner aren't set.
       return function () {};
@@ -101,11 +101,11 @@ exports.init = function (grunt) {
   exports.buildConfigContext = function (options) {
     var rawOptions = exports.extractRawOptions(options);
     if (options.raw && options.config) {
-      grunt.fail.warn('The options `raw` and `config` are mutually exclusive');
+      grunt.warn('The options `raw` and `config` are mutually exclusive');
     }
 
     if (rawOptions.options.length > 0 && options.config) {
-      grunt.fail.warn('The option `config` cannot be combined with ' +
+      grunt.warn('The option `config` cannot be combined with ' +
                        'these options: ' + rawOptions.options.join(', ') + '.');
     }
 
