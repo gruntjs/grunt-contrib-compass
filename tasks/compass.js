@@ -34,8 +34,10 @@ module.exports = function (grunt) {
 
       cb();
     });
-    child.stdout.pipe(process.stdout);
-    child.stderr.pipe(process.stderr);
+    if (child) {
+      child.stdout.pipe(process.stdout);
+      child.stderr.pipe(process.stderr);
+    }
   }
 
   grunt.registerMultiTask('compass', 'Compile Sass to CSS using Compass', function () {
