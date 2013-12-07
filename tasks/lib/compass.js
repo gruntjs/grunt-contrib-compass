@@ -36,7 +36,8 @@ exports.init = function (grunt) {
       'http_fonts_path',
       'http_fonts_dir',
       'extensions_dir',
-      'extension_path'
+      'extension_path',
+      'cache_dir'
     ];
 
     var usedOptions = Object.keys(options).filter(function (option) {
