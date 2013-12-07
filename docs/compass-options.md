@@ -212,9 +212,9 @@ Default: `true`
 
 If set to `false`, this disables the default asset cache buster.
 
-#### cacheDir
+## cacheDir
 
-Type: `String`
+Type: `String`  
 Default: `.sass-cache`
 
 The relative path to the folder where the sass cache files are generated.

@@ -1,4 +1,4 @@
-# grunt-contrib-compass v0.6.0 [![Build Status](https://travis-ci.org/gruntjs/grunt-contrib-compass.png?branch=master)](https://travis-ci.org/gruntjs/grunt-contrib-compass)
+# grunt-contrib-compass v0.7.0 [![Build Status](https://travis-ci.org/gruntjs/grunt-contrib-compass.png?branch=master)](https://travis-ci.org/gruntjs/grunt-contrib-compass)
 
 > Compile Sass to CSS using Compass
 
@@ -245,13 +245,12 @@ Default: `true`
 
 If set to `false`, this disables the default asset cache buster.
 
-
 #### cacheDir
 
-Type: `String`
+Type: `String`  
+Default: `.sass-cache`
 
 The relative path to the folder where the sass cache files are generated.
-
 
 #### require
 
@@ -414,6 +413,7 @@ grunt.initConfig({
 
 ## Release History
 
+ * 2013-12-07   v0.7.0   Add `cacheDir` option.
  * 2013-10-04   v0.6.0   Add `watch` option. Fix Compass errors not propagating.
  * 2013-08-08   v0.5.0   Add `assetCacheBuster` option.
  * 2013-07-28   v0.4.1   Fix `banner` option with `.css.scss` files.
@@ -432,4 +432,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Fri Oct 04 2013 21:03:14.*
+*This file was generated on Sat Dec 07 2013 01:24:56.*
