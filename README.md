@@ -288,6 +288,13 @@ Type: `Boolean`
 
 Quiet mode.
 
+### time
+
+Type: `Boolean`
+Default: `true`
+
+Shows time the task took.
+
 #### trace
 
 Type: `Boolean`

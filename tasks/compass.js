@@ -45,7 +45,7 @@ module.exports = function (grunt) {
     var cb = this.async();
 
     // display compilation time
-    if (!options.clean) {
+    if (!options.clean && options.time !== false) {
       options.time = true;
     }
 
