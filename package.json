@@ -52,7 +52,7 @@
     "style"
   ],
   "files": [
-    "tasks/compass.js",
-    "tasks/lib/compass.js"
+    "tasks",
+    "LICENSE-MIT"
   ]
 }
