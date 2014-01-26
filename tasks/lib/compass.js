@@ -54,7 +54,7 @@ exports.init = function (grunt) {
         // a string as argument, but either an inline-ruby block (which we don't
         // support) or a `:none` symbol to disable it.
         if (options[option] === false) {
-          raw += underscoredOption + ' :none';
+          raw += underscoredOption + ' :none' + '\n';
         }
         delete options[option];
         return true;
