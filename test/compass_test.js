@@ -125,7 +125,7 @@ exports.compass = {
     test.expect(3);
 
     test.equal(Object.keys(options).length, 0);
-    test.equal(raw.raw, 'asset_cache_buster :none');
+    test.equal(raw.raw, 'asset_cache_buster :none\n');
     test.deepEqual(raw.options, ['assetCacheBuster']);
     test.done();
   },
