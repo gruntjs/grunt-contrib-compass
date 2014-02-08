@@ -28,7 +28,7 @@ module.exports = function (grunt) {
       // on stderr when it has nothing to compile.
       // https://github.com/chriseppstein/compass/issues/993
       // Don't fail the task in this situation.
-      if (code === 1 && !/Nothing to compile/g.test(result.stderr)) {
+      if (code === 1 && !/Nothing to compile|Compass can't find any Sass files to compile/g.test(result.stderr)) {
         grunt.warn('↑');
       }
 
