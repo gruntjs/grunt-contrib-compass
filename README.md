@@ -52,7 +52,7 @@ String form of the Compass [configuration file][config].
 
 Type: `String`
 
-The the path Compass will run from. Defaults to the same path as your Gruntfile.
+The path Compass will run from. Defaults to the same path as your Gruntfile.
 
 #### banner
 
