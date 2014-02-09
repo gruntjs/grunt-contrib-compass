@@ -1,3 +1,7 @@
+v0.7.2:
+  date: 2014-02-09
+  changes:
+    - Improve compatibility with Compass 0.13
 v0.7.1:
   date: 2014-01-26
   changes:
