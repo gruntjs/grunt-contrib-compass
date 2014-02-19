@@ -141,7 +141,7 @@ The path to the project when running within the web server.
 
 Type: `String`
 
-The directory where the css stylesheets are kept. It is relative to the `projectPath`. Defaults to "stylesheets".
+The directory where the css stylesheets are kept. It is relative to the `httpPath`. Defaults to "stylesheets".
 
 #### httpStylesheetsPath
 
@@ -155,14 +155,14 @@ The full http path to stylesheets on the web server.
 Type: `String`  
 Default: `sass`
 
-The directory where the sass stylesheets are kept. It is relative to the `projectPath`.
+The directory where the sass stylesheets are kept. It is relative to the `httpPath`.
 
 #### imagesPath
 
 Type: `String`  
 Default: `images`
 
-The directory where the images are kept. It is relative to the projectPath.
+The directory where the images are kept. It is relative to the `httpPath`.
 
 #### httpImagesPath
 
@@ -176,12 +176,12 @@ The full http path to images on the web server.
 Type: `String`  
 Default: value of `imagesDir`
 
-The directory where generated images are kept. It is relative to the `projectPath`.
+The directory where generated images are kept. It is relative to the `httpPath`.
 
 #### generatedImagesPath
 
 Type: `String`  
-Default: value of `projectPath/generatedImagesDir`
+Default: value of `httpPath + "/"+ generatedImagesDir`
 
 The full path to where generated images are kept.
 
@@ -195,7 +195,7 @@ The full http path to generated images on the web server.
 #### javascriptsPath
 
 Type: `String`  
-Default: `projectPath/javascriptsDir`
+Default: `httpPath + "/" + javascriptsDir`
 
 The full path to where javascripts are kept.
 
@@ -209,7 +209,7 @@ The full http path to javascripts on the web server.
 #### fontsPath
 
 Type: `String`  
-Default: `projectPath/fontsDir`
+Default: `httpPath + "/" + fontsDir`
 
 The full path to where font files are kept.
 
