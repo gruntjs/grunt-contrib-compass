@@ -46,7 +46,7 @@ module.exports = function (grunt) {
 
     // display compilation time
     if (!options.clean) {
-      options.time = true;
+      options.time = options.hasOwnProperty('time') ? options.time : true;
     }
 
     // create a function to retroactively add a banner to the top of the
