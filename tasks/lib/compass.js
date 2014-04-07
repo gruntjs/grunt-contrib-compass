@@ -58,6 +58,24 @@ exports.init = function (grunt) {
         }
         delete options[option];
         return true;
+      } else if (underscoredOption === 'sprite_load_path') {
+        // Special handling for sprite_load_path as it doesn't take
+        // a string as argument, but an array or a string.
+        // Append the load paths in ruby via <<
+        // http://compass-style.org/blog/2012/02/01/compass-0-12-is-released/
+        var loadPath = options[option];
+        if (grunt.util.kindOf(loadPath) === 'string') {
+          loadPath = [loadPath];
+        }
+        if (grunt.util.kindOf(loadPath) === 'array') {
+          loadPath.forEach(function (path) {
+            // naively escape double-quotes in the value
+            path = path.replace(/"/, '\\"');
+            raw += underscoredOption + ' << "' + path + '"\n';
+          });
+        }
+        delete options[option];
+        return true;
       }
     });
 
