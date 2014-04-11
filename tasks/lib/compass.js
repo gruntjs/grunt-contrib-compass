@@ -44,7 +44,7 @@ exports.init = function (grunt) {
       var underscoredOption = camelCaseToUnderscore(option);
       if (supportedOptions.indexOf(underscoredOption) >= 0) {
         // naively escape double-quotes in the value
-        var value = options[option].replace(/"/, '\\"');
+        var value = options[option].replace(/"/g, '\\"');
         raw += underscoredOption + ' = "' + value + '"\n';
         delete options[option];
 
@@ -70,7 +70,7 @@ exports.init = function (grunt) {
         if (grunt.util.kindOf(loadPath) === 'array') {
           loadPath.forEach(function (path) {
             // naively escape double-quotes in the value
-            path = path.replace(/"/, '\\"');
+            path = path.replace(/"/g, '\\"');
             raw += underscoredOption + ' << "' + path + '"\n';
           });
         }
