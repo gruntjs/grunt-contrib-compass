@@ -64,10 +64,8 @@ exports.init = function (grunt) {
         // Append the load paths in ruby via <<
         // http://compass-style.org/blog/2012/02/01/compass-0-12-is-released/
         var loadPath = options[option];
-        if (grunt.util.kindOf(loadPath) === 'string') {
-          loadPath = [loadPath];
-        }
-        if (grunt.util.kindOf(loadPath) === 'array') {
+        if (loadPath) {
+          loadPath = Array.isArray(loadPath) ? loadPath : [loadPath];
           loadPath.forEach(function (path) {
             // naively escape double-quotes in the value
             path = path.replace(/"/g, '\\"');
