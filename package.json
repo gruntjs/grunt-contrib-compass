@@ -2,18 +2,11 @@
   "name": "grunt-contrib-compass",
   "description": "Compile Sass to CSS using Compass",
   "version": "0.7.2",
-  "homepage": "https://github.com/gruntjs/grunt-contrib-compass",
   "author": {
     "name": "Grunt Team",
     "url": "http://gruntjs.com/"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/gruntjs/grunt-contrib-compass.git"
-  },
-  "bugs": {
-    "url": "https://github.com/gruntjs/grunt-contrib-compass/issues"
-  },
+  "repository": "gruntjs/grunt-contrib-compass",
   "licenses": [
     {
       "type": "MIT",
@@ -21,25 +14,25 @@
     }
   ],
   "engines": {
-    "node": ">=0.8.0"
+    "node": ">=0.10.0"
   },
   "scripts": {
     "test": "grunt test"
   },
   "dependencies": {
-    "tmp": "0.0.23",
-    "dargs": "~0.1.0",
-    "async": "~0.2.0"
+    "async": "^0.8.0",
+    "dargs": "^0.1.0",
+    "tmp": "0.0.23"
   },
   "devDependencies": {
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-jshint": "~0.7.2",
-    "grunt-contrib-nodeunit": "~0.2.0",
-    "grunt-contrib-internal": "~0.4.2",
-    "grunt": "~0.4.0"
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-internal": "^0.4.2",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-nodeunit": "^0.4.0"
   },
   "peerDependencies": {
-    "grunt": "~0.4.0"
+    "grunt": "^0.4.0"
   },
   "keywords": [
     "gruntplugin",
