@@ -44,7 +44,7 @@ exports.init = function (grunt) {
       var underscoredOption = camelCaseToUnderscore(option);
       if (supportedOptions.indexOf(underscoredOption) >= 0) {
         // naively escape double-quotes in the value
-        var value = options[option].replace(/"/, '\\"');
+        var value = options[option].replace(/"/g, '\\"');
         raw += underscoredOption + ' = "' + value + '"\n';
         delete options[option];
 
@@ -55,6 +55,22 @@ exports.init = function (grunt) {
         // support) or a `:none` symbol to disable it.
         if (options[option] === false) {
           raw += underscoredOption + ' :none' + '\n';
+        }
+        delete options[option];
+        return true;
+      } else if (underscoredOption === 'sprite_load_path') {
+        // Special handling for sprite_load_path as it doesn't take
+        // a string as argument, but an array or a string.
+        // Append the load paths in ruby via <<
+        // http://compass-style.org/blog/2012/02/01/compass-0-12-is-released/
+        var loadPath = options[option];
+        if (loadPath) {
+          loadPath = Array.isArray(loadPath) ? loadPath : [loadPath];
+          loadPath.forEach(function (path) {
+            // naively escape double-quotes in the value
+            path = path.replace(/"/g, '\\"');
+            raw += underscoredOption + ' << "' + path + '"\n';
+          });
         }
         delete options[option];
         return true;

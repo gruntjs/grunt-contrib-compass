@@ -159,6 +159,13 @@ Default: `httpPath + "/" + generatedImagesDir`
 
 The full http path to generated images on the web server.
 
+## spriteLoadPath
+
+Type: `String|Array`  
+Default: value of `imagesPath`
+
+Add additional locations to look for sprites. The imagesPath is always the last entry in this list.
+
 ## javascriptsPath
 
 Type: `String`  

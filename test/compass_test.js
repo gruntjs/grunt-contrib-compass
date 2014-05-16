@@ -102,7 +102,7 @@ exports.compass = {
     var options = {
       unsupportedOption: 'irrellevant',
       imagesPath: '/app/images',
-      httpImagesPath: '/path/"with/quotes'
+      httpImagesPath: '/path/"with/"quotes'
     };
 
     var raw = compass.extractRawOptions(options);
@@ -111,8 +111,37 @@ exports.compass = {
 
     // all but the unsupported options are removed.
     test.equal(Object.keys(options).length, 1);
-    test.equal(raw.raw, 'images_path = "/app/images"\nhttp_images_path = "/path/\\"with/quotes"\n');
+    test.equal(raw.raw, 'images_path = "/app/images"\nhttp_images_path = "/path/\\"with/\\"quotes"\n');
     test.deepEqual(raw.options, ['imagesPath', 'httpImagesPath']);
+    test.done();
+  },
+  spriteLoadPath: function (test) {
+    var options = {
+      spriteLoadPath: '/path/"with/quotes'
+    };
+
+    var raw = compass.extractRawOptions(options);
+
+    test.expect(1);
+
+    // all but the unsupported options are removed.
+    test.equal(raw.raw, 'sprite_load_path << "/path/\\"with/quotes"\n');
+    test.done();
+  },
+  spriteLoadPathTest: function (test) {
+    var options = {
+      spriteLoadPath: [
+        '/path/"with/multiple"quotes',
+        '/secondPath'
+      ]
+    };
+
+    var raw = compass.extractRawOptions(options);
+
+    test.expect(1);
+
+    // all but the unsupported options are removed.
+    test.equal(raw.raw, 'sprite_load_path << "/path/\\"with/multiple\\"quotes"\nsprite_load_path << "/secondPath"\n');
     test.done();
   },
   disableCacheBuster: function (test) {
