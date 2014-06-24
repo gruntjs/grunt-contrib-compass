@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "async": "^0.8.0",
+    "bin-version-check": "^0.1.0",
     "dargs": "^0.1.0",
     "tmp": "0.0.23"
   },

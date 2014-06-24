@@ -7,6 +7,7 @@
  */
 
 'use strict';
+var binVersionCheck = require('bin-version-check');
 
 module.exports = function (grunt) {
   var compass = require('./lib/compass').init(grunt);
@@ -67,9 +68,15 @@ module.exports = function (grunt) {
         args.push('--config', path);
       }
 
-      compile(args, function () {
-        bannerCallback();
-        cb();
+      binVersionCheck(args[0], '>=0.12.2', function (err) {
+        if (err) {
+          grunt.warn(err);
+        }
+
+        compile(args, function () {
+          bannerCallback();
+          cb();
+        });
       });
     });
   });
