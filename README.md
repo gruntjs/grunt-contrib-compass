@@ -420,7 +420,7 @@ grunt.initConfig({
 
 ## Release History
 
- * 2014-09-24   v0.9.0   Add Compass version check to ensure only a supported version is used.
+ * 2014-06-24   v0.9.0   Add Compass version check to ensure only a supported version is used.
  * 2014-05-16   v0.8.0   Add `spriteLoadPath` option.
  * 2014-02-09   v0.7.2   Improve compatibility with Compass 0.13.
  * 2014-01-26   v0.7.1   Fix `assetCacheBuster` option.
@@ -443,4 +443,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Tue Jun 24 2014 22:15:11.*
+*This file was generated on Fri Jun 27 2014 21:31:33.*

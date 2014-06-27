@@ -1,5 +1,5 @@
 v0.9.0:
-  date: 2014-09-24
+  date: 2014-06-24
   changes:
     - Add Compass version check to ensure only a supported version is used.
 v0.8.0:
