@@ -128,6 +128,7 @@ exports.init = function (grunt) {
 
     return function configContext(cb) {
       if (rawOptions.raw) {
+        tmp.setGracefulCleanup();
         tmp.file(function (err, path, fd) {
           if (err) {
             return cb(err);
