@@ -155,10 +155,14 @@ exports.init = function (grunt) {
 
     var basePath = options.basePath;
 
-    if (process.platform === 'win32') {
-      args.unshift('compass.bat');
+    if (!options.compassPath) {
+      if (process.platform === 'win32') {
+        args.unshift('compass.bat');
+      } else {
+        args.unshift('compass');
+      }
     } else {
-      args.unshift('compass');
+      args.unshift(options.compassPath);
     }
 
     if (options.bundleExec) {
@@ -190,7 +194,8 @@ exports.init = function (grunt) {
       'bundleExec',
       'basePath',
       'specify',
-      'watch'
+      'watch',
+      'compassPath'
     ]));
 
     // Compass doesn't have a long flag for this option:
@@ -198,6 +203,13 @@ exports.init = function (grunt) {
     if (options.importPath) {
       args = args.map(function (el) {
         return el.replace('--import-path', '-I');
+      });
+    }
+
+    // Compass doesnt't have this flag.
+    if (options.compassPath) {
+      args = args.map(function (el) {
+        return el.replace('--compass-path', '');
       });
     }
 
