@@ -1,11 +1,11 @@
-# grunt-contrib-compass v0.9.0 [![Build Status: Linux](https://travis-ci.org/gruntjs/grunt-contrib-compass.png?branch=master)](https://travis-ci.org/gruntjs/grunt-contrib-compass)
+# grunt-contrib-compass v0.9.1 [![Build Status: Linux](https://travis-ci.org/gruntjs/grunt-contrib-compass.png?branch=master)](https://travis-ci.org/gruntjs/grunt-contrib-compass)
 
 > Compile Sass to CSS using Compass
 
 
 
 ## Getting Started
-This plugin requires Grunt `^0.4.0`
+This plugin requires Grunt `~0.4.0`
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
@@ -420,6 +420,7 @@ grunt.initConfig({
 
 ## Release History
 
+ * 2014-07-31   v0.9.1   Fixes npm peerDependency warnings.
  * 2014-06-24   v0.9.0   Add Compass version check to ensure only a supported version is used.
  * 2014-05-16   v0.8.0   Add `spriteLoadPath` option.
  * 2014-02-09   v0.7.2   Improve compatibility with Compass 0.13.
@@ -443,4 +444,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Fri Jun 27 2014 21:31:33.*
+*This file was generated on Thu Jul 31 2014 08:56:38.*
