@@ -162,7 +162,11 @@ exports.init = function (grunt) {
     }
 
     if (options.bundleExec) {
-      args.unshift('bundle', 'exec');
+      if (process.platform === 'win32') {
+        args.unshift('bundle.bat', 'exec');
+      } else {
+        args.unshift('bundle', 'exec');
+      }
     }
 
     if (options.basePath) {
