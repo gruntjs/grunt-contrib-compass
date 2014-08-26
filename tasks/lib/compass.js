@@ -156,7 +156,13 @@ exports.init = function (grunt) {
     var basePath = options.basePath;
 
     if (process.platform === 'win32') {
-      args.unshift('compass.bat');
+	  if(option.exe){
+		 args.unshift(option.exe);
+	  }
+	  else{
+	    args.unshift('compass.bat');
+	  }
+   
     } else {
       args.unshift('compass');
     }
