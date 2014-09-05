@@ -1,3 +1,7 @@
+v1.0.0:
+  date: 2014-09-08
+  changes:
+    - Fix `bundleExec` option on Windows.
 v0.9.1:
   date: 2014-07-31
   changes:
