@@ -3,6 +3,5 @@ node_js:
   - '0.10'
 before_install:
   - gem update --system
-  - gem install sass --version "=3.3.7"
-  - gem install compass --version "=0.12.3"
+  - gem install compass
   - npm install -g grunt-cli
