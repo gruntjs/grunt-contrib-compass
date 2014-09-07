@@ -197,14 +197,6 @@ exports.init = function (grunt) {
       'watch'
     ]));
 
-    // Compass doesn't have a long flag for this option:
-    // https://github.com/chriseppstein/compass/issues/1055
-    if (options.importPath) {
-      args = args.map(function (el) {
-        return el.replace('--import-path', '-I');
-      });
-    }
-
     if (grunt.option('no-color')) {
       args.push('--boring');
     }
