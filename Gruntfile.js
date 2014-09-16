@@ -87,6 +87,12 @@ module.exports = function (grunt) {
       }
     },
 
+    shell: {
+      posixlyCorrect: {
+        command: 'POSIXLY_CORRECT=1 grunt compass:compile'
+      }
+    },
+
     // Unit tests.
     nodeunit: {
       tests: ['test/*_test.js']
@@ -101,6 +107,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
   grunt.loadNpmTasks('grunt-contrib-internal');
+  grunt.loadNpmTasks('grunt-shell');
 
   grunt.registerTask('mkdir', grunt.file.mkdir);
 
@@ -112,6 +119,7 @@ module.exports = function (grunt) {
     'mkdir:tmp',
     'mkdir:tmp2',
     'mkdir:tmp3',
+    'shell:posixlyCorrect',
     'compass',
     'nodeunit',
     'clean'
