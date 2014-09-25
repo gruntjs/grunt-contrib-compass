@@ -318,7 +318,7 @@ Type: `Boolean`
 Remove generated files and the sass cache. Runs `compass clean` instead of `compass compile`.
 
 
-[config]: http://compass-style.org/help/tutorials/configuration-reference/
+[config]: http://compass-style.org/help/documentation/sass-based-configuration-options/
 
 ### Usage Examples
 
