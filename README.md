@@ -27,7 +27,7 @@ _Run this task with the `grunt compass` command._
 
 [Compass](http://compass-style.org/) is an open-source authoring framework for the [Sass](http://sass-lang.com/) css preprocessor. It helps you build stylesheets faster with a huge library of Sass mixins and functions, advanced tools for spriting, and workflow improvements including file based Sass configuration and a simple pattern for building and using Compass extensions.
 
-This task requires you to have [Ruby](http://www.ruby-lang.org/en/downloads/), [Sass](http://sass-lang.com/tutorial.html), and [Compass](http://compass-style.org/install/) >=0.12.2 installed. If you're on OS X or Linux you probably already have Ruby installed; test with `ruby -v` in your terminal. When you've confirmed you have Ruby installed, run `gem update --system && gem install compass` to install Compass and Sass.
+This task requires you to have [Ruby](http://www.ruby-lang.org/en/downloads/), [Sass](http://sass-lang.com/tutorial.html), and [Compass](http://compass-style.org/install/) >=1.0.1 installed. If you're on OS X or Linux you probably already have Ruby installed; test with `ruby -v` in your terminal. When you've confirmed you have Ruby installed, run `gem update --system && gem install compass` to install Compass and Sass.
 
 Compass operates on a folder level. Because of this you don't specify any src/dest, but instead define the `sassDir` and `cssDir` options.
 
@@ -338,7 +338,7 @@ Type: `Boolean`
 Runs `compass watch` instead of `compass compile`. This will use Compass' native watch command to listen for changes to Sass files and recompile your CSS on changes. While much faster than running `compass compile` each time you want to compile your Sass, Compass becomes a blocking task. This means that if you would like to use it in conjunction with another blocking task, such as `watch`, you will need to use it in conjunction with a paralleling task such as [grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent).
 
 
-[config]: http://compass-style.org/help/documentation/sass-based-configuration-options/
+[config]: http://compass-style.org/help/tutorials/configuration-reference/
 
 ### Usage Examples
 
@@ -446,4 +446,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Mon Sep 08 2014 00:40:29.*
+*This file was generated on Fri Oct 10 2014 12:19:50.*
