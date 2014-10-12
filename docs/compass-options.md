@@ -2,6 +2,13 @@
 
 Compass doesn't expose all of its [options][config] through the CLI, which this task makes use of. If you need an option not mentioned below you can either specify a path to a config.rb file in the `config` option or embed it directly into the `raw` option. Options defined in your Gruntfile will override those specified in your config.rb or `raw` property. `config` and `raw` are mutually exclusive.
 
+## sourcemap
+
+Type: `Boolean`  
+Default: `false`
+
+Generate Source Maps.
+
 ## config
 
 Type: `String`  
