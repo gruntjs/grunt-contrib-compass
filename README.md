@@ -314,12 +314,6 @@ Type: `Boolean`
 
 Allows Compass to overwrite existing files.
 
-#### dryRun
-
-Type: `Boolean`
-
-Dry Run. Tells you what it plans to do.
-
 #### boring
 
 Type: `Boolean`
@@ -453,4 +447,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Sun Oct 12 2014 11:36:34.*
+*This file was generated on Tue Oct 14 2014 02:38:21.*

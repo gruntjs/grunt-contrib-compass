@@ -281,12 +281,6 @@ Type: `Boolean`
 
 Allows Compass to overwrite existing files.
 
-## dryRun
-
-Type: `Boolean`
-
-Dry Run. Tells you what it plans to do.
-
 ## boring
 
 Type: `Boolean`
