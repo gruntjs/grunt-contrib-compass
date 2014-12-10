@@ -92,7 +92,7 @@ The target directory where you keep your CSS stylesheets.
 
 Type: `String|Array`
 
-Lets you specify which files you want to compile. Useful if you don't want to compile the whole folder. Globbing supported. Ignores filenames starting with underscore. 
+Lets you specify which files you want to compile. Useful if you don't want to compile the whole folder. Globbing supported. Ignores filenames starting with underscore. Write as 'path/to/file.scss' regardless of sassDir setting.
 
 #### imagesDir
 
