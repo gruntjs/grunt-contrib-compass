@@ -92,7 +92,7 @@ The target directory where you keep your CSS stylesheets.
 
 Type: `String|Array`
 
-Lets you specify which files you want to compile. Useful if you don't want to compile the whole folder. Globbing supported. Ignores filenames starting with underscore. 
+Lets you specify which files you want to compile. Useful if you don't want to compile the whole folder. Globbing supported. Ignores filenames starting with underscore. Paths are relative to the Gruntfile.
 
 #### imagesDir
 
@@ -447,4 +447,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Tue Oct 14 2014 02:38:21.*
+*This file was generated on Thu Dec 11 2014 12:41:29.*

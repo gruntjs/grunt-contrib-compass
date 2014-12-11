@@ -59,7 +59,7 @@ The target directory where you keep your CSS stylesheets.
 
 Type: `String|Array`
 
-Lets you specify which files you want to compile. Useful if you don't want to compile the whole folder. Globbing supported. Ignores filenames starting with underscore. 
+Lets you specify which files you want to compile. Useful if you don't want to compile the whole folder. Globbing supported. Ignores filenames starting with underscore. Paths are relative to the Gruntfile.
 
 ## imagesDir
 
@@ -306,4 +306,4 @@ Type: `Boolean`
 Runs `compass watch` instead of `compass compile`. This will use Compass' native watch command to listen for changes to Sass files and recompile your CSS on changes. While much faster than running `compass compile` each time you want to compile your Sass, Compass becomes a blocking task. This means that if you would like to use it in conjunction with another blocking task, such as `watch`, you will need to use it in conjunction with a paralleling task such as [grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent).
 
 
-[config]: http://compass-style.org/help/tutorials/configuration-reference/
+[config]: http://compass-style.org/help/documentation/configuration-reference/
