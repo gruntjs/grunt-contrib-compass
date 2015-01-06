@@ -201,6 +201,10 @@ exports.init = function (grunt) {
       args.push('--boring');
     }
 
+    if(options.poll) {
+      args.push('--poll');
+    }
+
     return args;
   };
 

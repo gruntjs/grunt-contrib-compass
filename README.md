@@ -339,6 +339,12 @@ Type: `Boolean`
 Runs `compass watch` instead of `compass compile`. This will use Compass' native watch command to listen for changes to Sass files and recompile your CSS on changes. While much faster than running `compass compile` each time you want to compile your Sass, Compass becomes a blocking task. This means that if you would like to use it in conjunction with another blocking task, such as `watch`, you will need to use it in conjunction with a paralleling task such as [grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent).
 
 
+#### poll
+
+Type: `Boolean`
+
+Will add [--poll](https://github.com/Compass/compass/issues/394) to the compass watch command, which will cause compass to poll for file changes rather than rely on notifications from the file system. This is helpful if you are trying to watch files on a mounted volume.
+
 [config]: http://compass-style.org/help/documentation/configuration-reference/
 
 ### Usage Examples
