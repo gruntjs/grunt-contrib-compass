@@ -155,6 +155,10 @@ exports.init = function (grunt) {
 
     var basePath = options.basePath;
 
+    if (options.compassVersion) {
+      args.unshift('_' + options.compassVersion + '_');
+    }
+
     if (process.platform === 'win32') {
       args.unshift('compass.bat');
     } else {
@@ -194,7 +198,8 @@ exports.init = function (grunt) {
       'bundleExec',
       'basePath',
       'specify',
-      'watch'
+      'watch',
+      'compassVersion'
     ]));
 
     if (grunt.option('no-color')) {

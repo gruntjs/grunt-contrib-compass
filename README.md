@@ -1,4 +1,4 @@
-# grunt-contrib-compass v1.0.1 [![Build Status: Linux](https://travis-ci.org/gruntjs/grunt-contrib-compass.png?branch=master)](https://travis-ci.org/gruntjs/grunt-contrib-compass)
+# grunt-contrib-compass v1.0.1 [![Build Status: Linux](https://travis-ci.org/gruntjs/grunt-contrib-compass.svg?branch=master)](https://travis-ci.org/gruntjs/grunt-contrib-compass)
 
 > Compile Sass to CSS using Compass
 
@@ -326,6 +326,12 @@ Type: `Boolean`
 
 Run `compass compile` with [bundle exec](http://gembundler.com/v1.3/man/bundle-exec.1.html): `bundle exec compass compile`.
 
+#### compassVersion
+
+Type: `String`
+
+Define which version of compass gem is used. This option sets `_version_` after compass executable, like `compass _1.0.1_ compile`.
+
 #### clean
 
 Type: `Boolean`
@@ -447,4 +453,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Thu Dec 11 2014 12:41:29.*
+*This file was generated on Thu Jan 15 2015 13:58:41.*
