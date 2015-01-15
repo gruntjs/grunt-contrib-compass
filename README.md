@@ -1,4 +1,4 @@
-# grunt-contrib-compass v1.0.1 [![Build Status: Linux](https://travis-ci.org/gruntjs/grunt-contrib-compass.png?branch=master)](https://travis-ci.org/gruntjs/grunt-contrib-compass)
+# grunt-contrib-compass v1.0.1 [![Build Status: Linux](https://travis-ci.org/gruntjs/grunt-contrib-compass.svg?branch=master)](https://travis-ci.org/gruntjs/grunt-contrib-compass)
 
 > Compile Sass to CSS using Compass
 
@@ -447,4 +447,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Thu Dec 11 2014 12:41:29.*
+*This file was generated on Thu Jan 15 2015 13:46:41.*
