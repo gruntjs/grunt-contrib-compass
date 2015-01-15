@@ -293,6 +293,12 @@ Type: `Boolean`
 
 Run `compass compile` with [bundle exec](http://gembundler.com/v1.3/man/bundle-exec.1.html): `bundle exec compass compile`.
 
+## compassVersion
+
+Type: `String`
+
+Define which version of compass gem is used. This option sets `_version_` after compass executable, like `compass _1.0.1_ compile`.
+
 ## clean
 
 Type: `Boolean`
