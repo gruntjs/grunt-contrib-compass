@@ -5,6 +5,7 @@ exports.init = function (grunt) {
   var dargs = require('dargs');
   var path = require('path');
   var async = require('async');
+  var onetime = require('onetime');
 
   var exports = {};
 
@@ -153,8 +154,6 @@ exports.init = function (grunt) {
       args = ['watch'];
     }
 
-    var basePath = options.basePath;
-
     if (process.platform === 'win32') {
       args.unshift('compass.bat');
     } else {
@@ -166,24 +165,6 @@ exports.init = function (grunt) {
         args.unshift('bundle.bat', 'exec');
       } else {
         args.unshift('bundle', 'exec');
-      }
-    }
-
-    if (options.basePath) {
-      args.push(options.basePath);
-    }
-
-    if (options.specify) {
-      var files = grunt.file.expand({
-        filter: function (filePath) {
-          return path.basename(filePath)[0] !== '_';
-        }
-      }, options.specify);
-
-      if (files.length > 0) {
-        [].push.apply(args, files);
-      } else {
-        return grunt.log.writeln('`specify` option used, but no files were found.');
       }
     }
 
@@ -199,6 +180,30 @@ exports.init = function (grunt) {
 
     if (grunt.option('no-color')) {
       args.push('--boring');
+    }
+
+    var pushDoubleDash = onetime(function () {
+      args.push('--');
+    });
+
+    if (options.basePath) {
+      pushDoubleDash();
+      args.push(options.basePath);
+    }
+
+    if (options.specify) {
+      pushDoubleDash();
+      var files = grunt.file.expand({
+        filter: function (filePath) {
+          return path.basename(filePath)[0] !== '_';
+        }
+      }, options.specify);
+
+      if (files.length > 0) {
+        [].push.apply(args, files);
+      } else {
+        return grunt.log.writeln('`specify` option used, but no files were found.');
+      }
     }
 
     return args;

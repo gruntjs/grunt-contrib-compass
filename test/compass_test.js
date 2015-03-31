@@ -66,7 +66,7 @@ exports.compass = {
     };
 
     test.deepEqual(compass.buildArgsArray(dataSet),
-      ['compass', 'compile', 'myproject'],
+      ['compass', 'compile', '--', 'myproject'],
       'should return the correct command.');
 
     test.done();
@@ -83,7 +83,7 @@ exports.compass = {
     };
 
     test.deepEqual(compass.buildArgsArray(dataSet),
-      ['compass', 'compile', 'test/fixtures/compile.scss', 'test/fixtures/extension.css.scss'],
+      ['compass', 'compile', '--', 'test/fixtures/compile.scss', 'test/fixtures/extension.css.scss'],
       'should return the correct command.');
 
     test.done();
