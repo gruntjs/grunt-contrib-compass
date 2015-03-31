@@ -1,4 +1,4 @@
-# grunt-contrib-compass v1.0.1 [![Build Status: Linux](https://travis-ci.org/gruntjs/grunt-contrib-compass.png?branch=master)](https://travis-ci.org/gruntjs/grunt-contrib-compass)
+# grunt-contrib-compass v1.0.2 [![Build Status: Linux](https://travis-ci.org/gruntjs/grunt-contrib-compass.svg?branch=master)](https://travis-ci.org/gruntjs/grunt-contrib-compass)
 
 > Compile Sass to CSS using Compass
 
@@ -421,6 +421,7 @@ grunt.initConfig({
 
 ## Release History
 
+ * 2015-03-31   v1.0.2   Improve POSIX compliance.
  * 2014-09-08   v1.0.1   Use compass long flag for `importPath`
  * 2014-09-05   v1.0.0   Fix `bundleExec` option on Windows.
  * 2014-07-31   v0.9.1   Fixes npm peerDependency warnings.
@@ -447,4 +448,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Thu Dec 11 2014 12:41:29.*
+*This file was generated on Tue Mar 31 2015 23:22:12.*

@@ -1,3 +1,7 @@
+v1.0.2:
+  date: 2015-03-31
+  changes:
+    - Improve POSIX compliance.
 v1.0.1:
   date: 2014-09-08
   changes:
