@@ -39,6 +39,13 @@ exports.compass = {
 
     test.done();
   },
+  issue232: function (test) {
+    test.expect(1);
+
+    test.ok(/\/\* grunt\-contrib\-compass banner \*\//.test(grunt.file.read('tmp6/extension.css')), 'should include the banner specified');
+
+    test.done();
+  },
   bundleExec: function (test) {
     var dataSet;
 
