@@ -77,6 +77,15 @@ module.exports = function (grunt) {
           banner: '/* <%= pkg.name %> banner */'
         }
       },
+      issue232: {
+        options: {
+          raw: 'Sass::Script::Number.precision = 10\n',
+          sassDir: 'test/fixtures',
+          cssDir: 'tmp6',
+          specify: 'test/fixtures/extension.css.scss',
+          banner: '/* <%= pkg.name %> banner */'
+        }
+      },
       clean: {
         options: {
           clean: true
