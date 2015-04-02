@@ -66,7 +66,10 @@ module.exports = function (grunt) {
       }
 
       if (path) {
-        args.push('--config', path);
+        // Add --config path arguments, before -- option-argument separator , if one exists
+        // otherwise add to the end
+        var doubleDashIdx = args.indexOf('--');
+        args.splice(doubleDashIdx === -1 ? args.length : doubleDashIdx, 0, '--config', path);
       }
 
       binVersionCheck(args[0], '>=0.12.2', function (err) {
