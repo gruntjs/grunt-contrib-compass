@@ -13,6 +13,7 @@ module.exports = function (grunt) {
   var compass = require('./lib/compass').init(grunt);
 
   function compile(args, cb) {
+    grunt.log.verbose.writeln('Running command: ' + args.join(' '));
     var child = grunt.util.spawn({
       cmd: args.shift(),
       args: args
