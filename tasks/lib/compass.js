@@ -7,7 +7,7 @@ exports.init = function (grunt) {
   var async = require('async');
   var onetime = require('onetime');
   var whichSync = require('which').sync;
-   
+
 
   var exports = {};
 
@@ -157,11 +157,11 @@ exports.init = function (grunt) {
     }
 
 
-    //Autoselect extension   
-    args.unshift(whichSync('compass'));
+    //Autoselect extension
+    args.unshift(path.basename(whichSync('compass')));
 
     if (options.bundleExec) {
-      args.unshift(whichSync('bundle'), 'exec');
+      args.unshift(path.basename(whichSync('bundle')), 'exec');
     }
 
     // add converted options
