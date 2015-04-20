@@ -24,7 +24,8 @@
     "bin-version-check": "^2.0.0",
     "dargs": "^2.0.3",
     "onetime": "^1.0.0",
-    "tmp": "0.0.24"
+    "tmp": "0.0.24",
+    "which": "^1.0.9"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
