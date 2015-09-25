@@ -108,7 +108,7 @@ exports.compass = {
 
     // all but the unsupported options are removed.
     test.equal(Object.keys(options).length, 1);
-    test.equal(raw.raw, 'images_path = "/app/images"\nhttp_images_path = "/path/\\"with/\\"quotes"\n');
+    test.equal(raw.raw, 'images_path = \'/app/images\'\nhttp_images_path = \'/path/\\"with/\\"quotes\'\n');
     test.deepEqual(raw.options, ['imagesPath', 'httpImagesPath']);
     test.done();
   },
