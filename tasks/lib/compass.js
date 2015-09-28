@@ -46,7 +46,7 @@ exports.init = function (grunt) {
       if (supportedOptions.indexOf(underscoredOption) >= 0) {
         // naively escape double-quotes in the value
         var value = options[option].replace(/"/g, '\\"');
-        raw += underscoredOption + " = '" + value + "'\n";
+        raw += underscoredOption + ' = \'' + value + '\'\n';
         delete options[option];
 
         return true;
