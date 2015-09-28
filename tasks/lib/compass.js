@@ -43,9 +43,9 @@ exports.init = function (grunt) {
     var usedOptions = Object.keys(options).filter(function (option) {
       var underscoredOption = camelCaseToUnderscore(option);
       if (supportedOptions.indexOf(underscoredOption) >= 0) {
-        // naively escape double-quotes in the value
-        var value = options[option].replace(/"/g, '\\"');
-        raw += underscoredOption + ' = "' + value + '"\n';
+        // naively escape single-quotes in the value
+        var value = options[option].replace(/'/g, '\\\'');
+        raw += underscoredOption + ' = \'' + value + '\'\n';
         delete options[option];
 
         return true;
