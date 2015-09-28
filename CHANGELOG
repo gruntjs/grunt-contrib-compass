@@ -1,7 +1,12 @@
+v1.0.4:
+  date: 2015-09-29
+  changes:
+    - Use the `compass` flag for the `httpPath` option.
+    - Use single-quotes in the config.rb generated file.
 v1.0.3:
   date: 2015-04-02
   changes:
-   - Fix #232: add --config path before `--` option/argument separator.
+   - Add `--config` path before `--` option/argument separator.
 v1.0.2:
   date: 2015-03-31
   changes:

@@ -1,4 +1,4 @@
-# grunt-contrib-compass v1.0.3 [![Build Status: Linux](https://travis-ci.org/gruntjs/grunt-contrib-compass.svg?branch=master)](https://travis-ci.org/gruntjs/grunt-contrib-compass)
+# grunt-contrib-compass v1.0.4 [![Build Status: Linux](https://travis-ci.org/gruntjs/grunt-contrib-compass.svg?branch=master)](https://travis-ci.org/gruntjs/grunt-contrib-compass)
 
 > Compile Sass to CSS using Compass
 
@@ -421,6 +421,8 @@ grunt.initConfig({
 
 ## Release History
 
+ * 2015-09-29   v1.0.4   Use the `compass` flag for the `httpPath` option. Use single-quotes in the config.rb generated file.
+ * 2015-04-02   v1.0.3   Add `--config` path before `--` option/argument separator.
  * 2015-03-31   v1.0.2   Improve POSIX compliance.
  * 2014-09-08   v1.0.1   Use compass long flag for `importPath`
  * 2014-09-05   v1.0.0   Fix `bundleExec` option on Windows.
@@ -448,4 +450,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Fri Apr 03 2015 00:20:26.*
+*This file was generated on Tue Sep 29 2015 00:52:30.*
