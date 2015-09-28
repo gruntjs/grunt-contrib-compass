@@ -22,7 +22,6 @@ exports.init = function (grunt) {
   exports.extractRawOptions = function extractRawOptions(options) {
     var raw = options.raw || '';
     var supportedOptions = [
-      'http_path',
       'css_path',
       'http_stylesheets_path',
       'sass_path',
