@@ -1,4 +1,5 @@
 node_modules
 npm-debug.log
 tmp
+tmp[0-9]*
 .sass-cache
