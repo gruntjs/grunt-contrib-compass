@@ -345,7 +345,7 @@ Runs `compass watch` instead of `compass compile`. This will use Compass' native
 
 #### Example config
 
-```javascript
+```js
 grunt.initConfig({
   compass: {                  // Task
     dist: {                   // Target
@@ -375,7 +375,7 @@ grunt.registerTask('default', ['jshint', 'compass']);
 
 ##### Use external config file
 
-```javascript
+```js
 grunt.initConfig({
   compass: {
     dist: {
@@ -389,7 +389,7 @@ grunt.initConfig({
 
 ##### Override setting in external config file
 
-```javascript
+```js
 grunt.initConfig({
   compass: {
     dist: {
@@ -404,7 +404,7 @@ grunt.initConfig({
 
 ##### Use `raw` option
 
-```javascript
+```js
 grunt.initConfig({
   compass: {
     dist: {
@@ -450,4 +450,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Tue Sep 29 2015 00:52:30.*
+*This file was generated on Fri Oct 16 2015 18:57:49.*

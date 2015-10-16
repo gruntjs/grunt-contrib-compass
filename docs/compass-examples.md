@@ -2,7 +2,7 @@
 
 ## Example config
 
-```javascript
+```js
 grunt.initConfig({
   compass: {                  // Task
     dist: {                   // Target
@@ -32,7 +32,7 @@ grunt.registerTask('default', ['jshint', 'compass']);
 
 ### Use external config file
 
-```javascript
+```js
 grunt.initConfig({
   compass: {
     dist: {
@@ -46,7 +46,7 @@ grunt.initConfig({
 
 ### Override setting in external config file
 
-```javascript
+```js
 grunt.initConfig({
   compass: {
     dist: {
@@ -61,7 +61,7 @@ grunt.initConfig({
 
 ### Use `raw` option
 
-```javascript
+```js
 grunt.initConfig({
   compass: {
     dist: {
