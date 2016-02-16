@@ -7,6 +7,8 @@ exports.init = function (grunt) {
   var path = require('path');
   var async = require('async');
   var onetime = require('onetime');
+  var whichSync = require('which').sync;
+
 
   var exports = {};
 
@@ -154,18 +156,12 @@ exports.init = function (grunt) {
       args = ['watch'];
     }
 
-    if (process.platform === 'win32') {
-      args.unshift('compass.bat');
-    } else {
-      args.unshift('compass');
-    }
+
+    //Autoselect extension
+    args.unshift(path.basename(whichSync('compass')));
 
     if (options.bundleExec) {
-      if (process.platform === 'win32') {
-        args.unshift('bundle.bat', 'exec');
-      } else {
-        args.unshift('bundle', 'exec');
-      }
+      args.unshift(path.basename(whichSync('bundle')), 'exec');
     }
 
     // add converted options
