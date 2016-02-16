@@ -122,7 +122,7 @@ module.exports = function (grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', [
+  var testTasks = [
     'jshint',
     'clean',
     'mkdir:tmp',
@@ -132,7 +132,12 @@ module.exports = function (grunt) {
     'compass',
     'nodeunit',
     'clean'
-  ]);
+  ];
+  // Skip the posixlyCorrect task on Windows
+  if (process.platform === 'win32') {
+    testTasks.splice(5, 1);
+  }
+  grunt.registerTask('test', testTasks);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['test', 'build-contrib']);
