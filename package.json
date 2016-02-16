@@ -31,6 +31,9 @@
     "grunt-contrib-nodeunit": "^0.4.1",
     "grunt-shell": "^1.1.2"
   },
+  "peerDependencies": {
+    "grunt": ">= 0.4.5"
+  },
   "keywords": [
     "gruntplugin",
     "compass",
