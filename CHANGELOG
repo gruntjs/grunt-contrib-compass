@@ -1,3 +1,8 @@
+v1.1.0:
+  date: 2015-02-15
+  changes:
+    - Use `which` to find compass binary cross platform.
+    - Update async and tmp dependencies.
 v1.0.4:
   date: 2015-09-29
   changes:

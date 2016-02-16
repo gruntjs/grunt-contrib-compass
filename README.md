@@ -1,11 +1,10 @@
-# grunt-contrib-compass v1.0.4 [![Build Status: Linux](https://travis-ci.org/gruntjs/grunt-contrib-compass.svg?branch=master)](https://travis-ci.org/gruntjs/grunt-contrib-compass)
+# grunt-contrib-compass v1.1.0 [![Build Status: Linux](https://travis-ci.org/gruntjs/grunt-contrib-compass.svg?branch=master)](https://travis-ci.org/gruntjs/grunt-contrib-compass)
 
 > Compile Sass to CSS using Compass
 
 
 
 ## Getting Started
-This plugin requires Grunt `>=0.4.0`
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
@@ -421,6 +420,7 @@ grunt.initConfig({
 
 ## Release History
 
+ * 2015-02-15   v1.1.0   Use `which` to find compass binary cross platform. Update async and tmp dependencies.
  * 2015-09-29   v1.0.4   Use the `compass` flag for the `httpPath` option. Use single-quotes in the config.rb generated file.
  * 2015-04-02   v1.0.3   Add `--config` path before `--` option/argument separator.
  * 2015-03-31   v1.0.2   Improve POSIX compliance.
@@ -450,4 +450,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Fri Oct 16 2015 18:57:49.*
+*This file was generated on Mon Feb 15 2016 20:24:15.*
