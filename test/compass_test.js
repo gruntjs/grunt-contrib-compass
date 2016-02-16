@@ -1,7 +1,12 @@
 'use strict';
 var fs = require('fs');
+var path = require('path');
 var grunt = require('grunt');
 var compass = require('../tasks/lib/compass').init(grunt);
+var whichSync = require('which').sync;
+
+var bundleBin = path.basename(whichSync('bundle'));
+var compassBin = path.basename(whichSync('compass'));
 
 exports.compass = {
   compile: function (test) {
@@ -57,7 +62,7 @@ exports.compass = {
     };
 
     test.deepEqual(compass.buildArgsArray(dataSet),
-      ['bundle', 'exec', 'compass', 'compile'],
+      [bundleBin, 'exec', compassBin, 'compile'],
       'should return the correct command.');
 
     test.done();
@@ -73,7 +78,7 @@ exports.compass = {
     };
 
     test.deepEqual(compass.buildArgsArray(dataSet),
-      ['compass', 'compile', '--', 'myproject'],
+      [compassBin, 'compile', '--', 'myproject'],
       'should return the correct command.');
 
     test.done();
@@ -90,7 +95,7 @@ exports.compass = {
     };
 
     test.deepEqual(compass.buildArgsArray(dataSet),
-      ['compass', 'compile', '--', 'test/fixtures/compile.scss', 'test/fixtures/extension.css.scss'],
+      [compassBin, 'compile', '--', 'test/fixtures/compile.scss', 'test/fixtures/extension.css.scss'],
       'should return the correct command.');
 
     test.done();

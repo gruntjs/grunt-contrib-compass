@@ -157,7 +157,7 @@ exports.init = function (grunt) {
     }
 
 
-    //Autoselect extension
+    // Find the compass binary
     args.unshift(path.basename(whichSync('compass')));
 
     if (options.bundleExec) {
