@@ -1,0 +1,31 @@
+# AppVeyor file
+# http://www.appveyor.com/docs/appveyor-yml
+
+version: "{build}"
+
+clone_depth: 10
+
+environment:
+  matrix:
+    - nodejs_version: "0.10"
+    - nodejs_version: "0.12"
+    - nodejs_version: "4"
+    - nodejs_version: "5"
+
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - npm install
+  - gem update --system
+  - gem install compass
+
+build: off
+
+test_script:
+  - node --version && npm --version
+  - npm test
+
+matrix:
+  fast_finish: true
+
+cache:
+  - 'node_modules -> package.json'
