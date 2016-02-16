@@ -33,6 +33,7 @@ module.exports = function (grunt) {
         'tmp3',
         'tmp4',
         'tmp5',
+        'tmp6',
         '.sass-cache'
       ]
     },
