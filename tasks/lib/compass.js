@@ -156,12 +156,11 @@ exports.init = function (grunt) {
       args = ['watch'];
     }
 
-
-    // Find the compass binary
-    args.unshift(path.basename(whichSync('compass')));
-
     if (options.bundleExec) {
-      args.unshift(path.basename(whichSync('bundle')), 'exec');
+      args.unshift(path.basename(whichSync('bundle')), 'exec', 'compass');
+    } else {
+      // Find the compass binary
+      args.unshift(path.basename(whichSync('compass')));
     }
 
     // add converted options

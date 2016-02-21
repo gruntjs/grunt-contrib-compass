@@ -62,7 +62,7 @@ exports.compass = {
     };
 
     test.deepEqual(compass.buildArgsArray(dataSet),
-      [bundleBin, 'exec', compassBin, 'compile'],
+      [bundleBin, 'exec', 'compass', 'compile'],
       'should return the correct command.');
 
     test.done();
