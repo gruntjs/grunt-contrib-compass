@@ -100,6 +100,9 @@ module.exports = function (grunt) {
     shell: {
       posixlyCorrect: {
         command: 'POSIXLY_CORRECT=1 grunt compass:compile'
+      },
+      posixlyCorrectWindows: {
+        command: 'SET POSIXLY_CORRECT=1 && grunt compass:compile'
       }
     },
 
@@ -129,9 +132,8 @@ module.exports = function (grunt) {
     'nodeunit',
     'clean'
   ];
-  // Skip the posixlyCorrect task on Windows
   if (process.platform === 'win32') {
-    testTasks.splice(2, 1);
+    testTasks.splice(2, 1, 'shell:posixlyCorrectWindows');
   }
   grunt.registerTask('test', testTasks);
 
