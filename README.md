@@ -420,14 +420,14 @@ grunt.initConfig({
 
 ## Release History
 
- * 2016-03-04   v1.1.1   pass only compass package name, not full path
+ * 2016-03-04   v1.1.1   Pass only compass package name, not full path.
  * 2016-02-15   v1.1.0   Use `which` to find compass binary cross platform. Update async and tmp dependencies.
  * 2015-09-29   v1.0.4   Use the `compass` flag for the `httpPath` option. Use single-quotes in the config.rb generated file.
  * 2015-04-02   v1.0.3   Add `--config` path before `--` option/argument separator.
  * 2015-03-31   v1.0.2   Improve POSIX compliance.
- * 2014-09-08   v1.0.1   Use compass long flag for `importPath`
+ * 2014-09-08   v1.0.1   Use compass long flag for `importPath`.
  * 2014-09-05   v1.0.0   Fix `bundleExec` option on Windows.
- * 2014-07-31   v0.9.1   Fixes npm peerDependency warnings.
+ * 2014-07-31   v0.9.1   Fix npm peerDependency warnings.
  * 2014-06-24   v0.9.0   Add Compass version check to ensure only a supported version is used.
  * 2014-05-16   v0.8.0   Add `spriteLoadPath` option.
  * 2014-02-09   v0.7.2   Improve compatibility with Compass 0.13.
@@ -439,16 +439,16 @@ grunt.initConfig({
  * 2013-07-19   v0.4.0   Add `banner` option. Show compilation time.
  * 2013-06-24   v0.3.0   Add `extensionDir` and `extensionPath` options. *Requires Compass >=0.12.2*.
  * 2013-04-11   v0.2.0   Add `clean` option. Expose `raw` options as Grunt options. Fix detection of `Nothing to compile` situation.
- * 2013-02-27   v0.1.3   Fixes bundleExec.
+ * 2013-02-27   v0.1.3   Fixes `bundleExec`.
  * 2013-02-17   v0.1.2   Ensure Gruntfile.js is included on npm.
  * 2013-02-15   v0.1.1   First official release for Grunt 0.4.0.
- * 2013-02-05   v0.1.1rc8   Added new options: basePath specify, debugInfo.
+ * 2013-02-05   v0.1.1rc8   Added new options: `basePath`, `specify`, `debugInfo`.
  * 2013-01-25   v0.1.1rc7   Updating grunt/gruntplugin dependencies to rc7. Changing in-development grunt/gruntplugin dependency versions from tilde version ranges to specific versions.
- * 2013-01-10   v0.1.1rc5   Updating to work with grunt v0.4.0rc5.
+ * 2013-01-10   v0.1.1rc5   Updating to work with Grunt v0.4.0rc5.
  * 2012-10-22   v0.1.0   Initial release
 
 ---
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Thu Mar 17 2016 20:01:23.*
+*This file was generated on Fri Mar 18 2016 19:25:03.*

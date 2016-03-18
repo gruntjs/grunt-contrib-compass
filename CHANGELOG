@@ -1,7 +1,7 @@
 v1.1.1:
   date: 2016-03-04
   changes:
-    - pass only compass package name, not full path
+    - Pass only compass package name, not full path.
 v1.1.0:
   date: 2016-02-15
   changes:
@@ -23,7 +23,7 @@ v1.0.2:
 v1.0.1:
   date: 2014-09-08
   changes:
-    - Use compass long flag for `importPath`
+    - Use compass long flag for `importPath`.
 v1.0.0:
   date: 2014-09-05
   changes:
@@ -31,7 +31,7 @@ v1.0.0:
 v0.9.1:
   date: 2014-07-31
   changes:
-    - Fixes npm peerDependency warnings.
+    - Fix npm peerDependency warnings.
 v0.9.0:
   date: 2014-06-24
   changes:
@@ -82,7 +82,7 @@ v0.2.0:
 v0.1.3:
   date: 2013-02-27
   changes:
-    - Fixes bundleExec.
+    - Fixes `bundleExec`.
 v0.1.2:
   date: 2013-02-17
   changes:
@@ -94,7 +94,7 @@ v0.1.1:
 v0.1.1rc8:
   date: 2013-02-05
   changes:
-    - 'Added new options: basePath specify, debugInfo.'
+    - 'Added new options: `basePath`, `specify`, `debugInfo`.'
 v0.1.1rc7:
   date: 2013-01-25
   changes:
@@ -103,7 +103,7 @@ v0.1.1rc7:
 v0.1.1rc5:
   date: 2013-01-10
   changes:
-    - Updating to work with grunt v0.4.0rc5.
+    - Updating to work with Grunt v0.4.0rc5.
 v0.1.0:
   date: 2012-10-22
   changes:
