@@ -119,16 +119,11 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-internal');
   grunt.loadNpmTasks('grunt-shell');
 
-  grunt.registerTask('mkdir', grunt.file.mkdir);
-
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
   var testTasks = [
     'jshint',
     'clean',
-    'mkdir:tmp',
-    'mkdir:tmp2',
-    'mkdir:tmp3',
     'shell:posixlyCorrect',
     'compass',
     'nodeunit',
@@ -136,7 +131,7 @@ module.exports = function (grunt) {
   ];
   // Skip the posixlyCorrect task on Windows
   if (process.platform === 'win32') {
-    testTasks.splice(5, 1);
+    testTasks.splice(2, 1);
   }
   grunt.registerTask('test', testTasks);
 
