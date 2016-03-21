@@ -8,46 +8,54 @@ var whichSync = require('which').sync;
 var bundleBin = path.basename(whichSync('bundle'));
 var compassBin = path.basename(whichSync('compass'));
 
+function readFile(file) {
+  var contents = grunt.file.read(file);
+  if (process.platform === 'win32') {
+    contents = contents.replace(/\r\n/g, '\n');
+  }
+  return contents;
+}
+
 exports.compass = {
   compile: function (test) {
     test.expect(1);
 
-    test.ok(/border-color:#3bbfce/.test(grunt.file.read('tmp/compile.css')), 'should compile Sass to CSS using Compass');
+    test.ok(/border-color:#3bbfce/.test(readFile('tmp/compile.css')), 'should compile Sass to CSS using Compass');
 
     test.done();
   },
   compileWithConfigFile: function (test) {
     test.expect(1);
 
-    test.ok(/border-color:#3bbfce/.test(grunt.file.read('tmp2/compile.css')), 'should compile with external config file');
+    test.ok(/border-color:#3bbfce/.test(readFile('tmp2/compile.css')), 'should compile with external config file');
 
     test.done();
   },
   compileWithRaw: function (test) {
     test.expect(1);
 
-    test.ok(/border-color:#3bbfce/.test(grunt.file.read('tmp3/compile.css')), 'should compile with raw content specified');
+    test.ok(/border-color:#3bbfce/.test(readFile('tmp3/compile.css')), 'should compile with raw content specified');
 
     test.done();
   },
   compileWithBanner: function (test) {
     test.expect(1);
 
-    test.ok(/\/\* grunt\-contrib\-compass banner \*\//.test(grunt.file.read('tmp4/simple.css')), 'should include the banner specified');
+    test.ok(/\/\* grunt\-contrib\-compass banner \*\//.test(readFile('tmp4/simple.css')), 'should include the banner specified');
 
     test.done();
   },
   compileCssScssExtensionWithBanner: function (test) {
     test.expect(1);
 
-    test.ok(/\/\* grunt\-contrib\-compass banner \*\//.test(grunt.file.read('tmp5/extension.css')), 'should include the banner specified');
+    test.ok(/\/\* grunt\-contrib\-compass banner \*\//.test(readFile('tmp5/extension.css')), 'should include the banner specified');
 
     test.done();
   },
   issue232: function (test) {
     test.expect(1);
 
-    test.ok(/\/\* grunt\-contrib\-compass banner \*\//.test(grunt.file.read('tmp6/extension.css')), 'should include the banner specified');
+    test.ok(/\/\* grunt\-contrib\-compass banner \*\//.test(readFile('tmp6/extension.css')), 'should include the banner specified');
 
     test.done();
   },
