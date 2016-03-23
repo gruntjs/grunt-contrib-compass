@@ -120,7 +120,7 @@ The directory where the css stylesheets are kept. It is relative to the `project
 ## httpStylesheetsPath
 
 Type: `String`  
-Default: `httpPath + "/" + cssDir`
+Default: `httpPath + '/' + cssDir`
 
 The full http path to stylesheets on the web server.
 
@@ -141,7 +141,7 @@ The directory where the images are kept. It is relative to the projectPath.
 ## httpImagesPath
 
 Type: `String`  
-Default: `httpPath + "/" + imagesDir`
+Default: `httpPath + '/' + imagesDir`
 
 The full http path to images on the web server.
 
@@ -162,7 +162,7 @@ The full path to where generated images are kept.
 ## httpGeneratedImagesPath
 
 Type: `String`  
-Default: `httpPath + "/" + generatedImagesDir`
+Default: `httpPath + '/' + generatedImagesDir`
 
 The full http path to generated images on the web server.
 
@@ -183,7 +183,7 @@ The full path to where javascripts are kept.
 ## httpJavascriptsPath
 
 Type: `String`  
-Default: `httpPath + "/" + javascriptsDir`
+Default: `httpPath + '/' + javascriptsDir`
 
 The full http path to javascripts on the web server.
 
