@@ -152,7 +152,7 @@ The directory where the css stylesheets are kept. It is relative to the `project
 #### httpStylesheetsPath
 
 Type: `String`  
-Default: `httpPath + "/" + cssDir`
+Default: `httpPath + '/' + cssDir`
 
 The full http path to stylesheets on the web server.
 
@@ -173,7 +173,7 @@ The directory where the images are kept. It is relative to the projectPath.
 #### httpImagesPath
 
 Type: `String`  
-Default: `httpPath + "/" + imagesDir`
+Default: `httpPath + '/' + imagesDir`
 
 The full http path to images on the web server.
 
@@ -194,7 +194,7 @@ The full path to where generated images are kept.
 #### httpGeneratedImagesPath
 
 Type: `String`  
-Default: `httpPath + "/" + generatedImagesDir`
+Default: `httpPath + '/' + generatedImagesDir`
 
 The full http path to generated images on the web server.
 
@@ -215,7 +215,7 @@ The full path to where javascripts are kept.
 #### httpJavascriptsPath
 
 Type: `String`  
-Default: `httpPath + "/" + javascriptsDir`
+Default: `httpPath + '/' + javascriptsDir`
 
 The full http path to javascripts on the web server.
 
@@ -434,7 +434,7 @@ grunt.initConfig({
  * 2014-01-26   v0.7.1   Fix `assetCacheBuster` option.
  * 2013-12-07   v0.7.0   Add `cacheDir` option.
  * 2013-10-04   v0.6.0   Add `watch` option. Fix Compass errors not propagating.
- * 2013-08-08   v0.5.0   Add `assetCacheBuster` option.
+ * 2013-08-8   v0.5.0   Add `assetCacheBuster` option.
  * 2013-07-28   v0.4.1   Fix `banner` option with `.css.scss` files.
  * 2013-07-19   v0.4.0   Add `banner` option. Show compilation time.
  * 2013-06-24   v0.3.0   Add `extensionDir` and `extensionPath` options. *Requires Compass >=0.12.2*.
@@ -451,4 +451,4 @@ grunt.initConfig({
 
 Task submitted by [Sindre Sorhus](http://github.com/sindresorhus)
 
-*This file was generated on Fri Mar 18 2016 19:25:03.*
+*This file was generated on Wed Apr 06 2016 15:17:42.*

@@ -7,5 +7,11 @@ node_js:
   - "5"
   - "iojs"
 before_install:
+  - if [ "$TRAVIS_NODE_VERSION" = "0.10" ]; then npm install -g npm@2; fi
   - gem update --system
   - gem install compass
+matrix:
+  fast_finish: true
+cache:
+  directories:
+    - node_modules
