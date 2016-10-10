@@ -186,6 +186,8 @@ exports.init = function (grunt) {
       args.push(options.basePath);
     }
 
+    args.push('--time');
+
     if (options.specify) {
       pushDoubleDash();
       var files = grunt.file.expand({
