@@ -163,7 +163,7 @@ Default: `sass`
 
 The directory where the sass stylesheets are kept. It is relative to the `projectPath`.
 
-#### imagesPath
+#### imagesDir
 
 Type: `String`  
 Default: `images`
