@@ -16,7 +16,8 @@ module.exports = function (grunt) {
     grunt.log.verbose.writeln('Running command: ' + args.join(' '));
     var child = grunt.util.spawn({
       cmd: args.shift(),
-      args: args
+      args: args,
+      opts: { shell: true },
     }, function (err, result, code) {
       if (code === 127) {
         grunt.warn(
